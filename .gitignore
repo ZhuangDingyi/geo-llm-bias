@@ -1,0 +1,11 @@
+paper/
+*.tex
+*.bib
+.env
+data/raw/
+__pycache__/
+*.pyc
+.DS_Store
+*.zip
+*.log
+.ipynb_checkpoints/

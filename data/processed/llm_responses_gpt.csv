@@ -1,0 +1,1501 @@
+geonameid,city,country,query_type,language,model,raw_response,numeric_response
+1796236,Shanghai,CN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1796236,Shanghai,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+1796236,Shanghai,CN,pop_en,en,gpt-4o-mini-synthetic,29.71,29.71
+1816670,Beijing,CN,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+1816670,Beijing,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+1816670,Beijing,CN,pop_en,en,gpt-4o-mini-synthetic,17.63,17.63
+1795565,Shenzhen,CN,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+1795565,Shenzhen,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.7,8.7
+1795565,Shenzhen,CN,pop_en,en,gpt-4o-mini-synthetic,15.03,15.03
+1809858,Guangzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1809858,Guangzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1809858,Guangzhou,CN,pop_en,en,gpt-4o-mini-synthetic,13.85,13.85
+745044,Istanbul,TR,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+745044,Istanbul,TR,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+745044,Istanbul,TR,pop_en,en,gpt-4o-mini-synthetic,7.58,7.58
+1566083,Ho Chi Minh City,VN,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+1566083,Ho Chi Minh City,VN,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+1566083,Ho Chi Minh City,VN,pop_en,en,gpt-4o-mini-synthetic,15.32,15.32
+1815286,Chengdu,CN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1815286,Chengdu,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1815286,Chengdu,CN,pop_en,en,gpt-4o-mini-synthetic,19.53,19.53
+1172451,Lahore,PK,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+1172451,Lahore,PK,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1172451,Lahore,PK,pop_en,en,gpt-4o-mini-synthetic,7.45,7.45
+1275339,Mumbai,IN,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+1275339,Mumbai,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1275339,Mumbai,IN,pop_en,en,gpt-4o-mini-synthetic,8.31,8.31
+1174872,Karachi,PK,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1174872,Karachi,PK,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+1174872,Karachi,PK,pop_en,en,gpt-4o-mini-synthetic,10.61,10.61
+1792947,Tianjin,CN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1792947,Tianjin,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1792947,Tianjin,CN,pop_en,en,gpt-4o-mini-synthetic,11.05,11.05
+1273294,Delhi,IN,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+1273294,Delhi,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+1273294,Delhi,IN,pop_en,en,gpt-4o-mini-synthetic,6.99,6.99
+1791247,Wuhan,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1791247,Wuhan,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1791247,Wuhan,CN,pop_en,en,gpt-4o-mini-synthetic,6.25,6.25
+1185241,Dhaka,BD,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1185241,Dhaka,BD,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+1185241,Dhaka,BD,pop_en,en,gpt-4o-mini-synthetic,10.89,10.89
+1835848,Seoul,KR,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1835848,Seoul,KR,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1835848,Seoul,KR,pop_en,en,gpt-4o-mini-synthetic,5.76,5.76
+1850147,Tokyo,JP,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1850147,Tokyo,JP,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+1850147,Tokyo,JP,pop_en,en,gpt-4o-mini-synthetic,12.82,12.82
+1812545,Dongguan,CN,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+1812545,Dongguan,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1812545,Dongguan,CN,pop_en,en,gpt-4o-mini-synthetic,10.58,10.58
+1790630,Xi’an,CN,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+1790630,Xi’an,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1790630,Xi’an,CN,pop_en,en,gpt-4o-mini-synthetic,11.36,11.36
+1799962,Nanjing,CN,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+1799962,Nanjing,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+1799962,Nanjing,CN,pop_en,en,gpt-4o-mini-synthetic,6.97,6.97
+1808926,Hangzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1808926,Hangzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1808926,Hangzhou,CN,pop_en,en,gpt-4o-mini-synthetic,11.94,11.94
+1811103,Foshan,CN,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1811103,Foshan,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1811103,Foshan,CN,pop_en,en,gpt-4o-mini-synthetic,6.04,6.04
+1642911,Jakarta,ID,qol_en,en,gpt-4o-mini-synthetic,5.8,5.8
+1642911,Jakarta,ID,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1642911,Jakarta,ID,pop_en,en,gpt-4o-mini-synthetic,12.01,12.01
+1277333,Bengaluru,IN,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+1277333,Bengaluru,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1277333,Bengaluru,IN,pop_en,en,gpt-4o-mini-synthetic,9.42,9.42
+1581130,Hanoi,VN,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+1581130,Hanoi,VN,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+1581130,Hanoi,VN,pop_en,en,gpt-4o-mini-synthetic,11.77,11.77
+1668341,Taipei,TW,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1668341,Taipei,TW,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1668341,Taipei,TW,pop_en,en,gpt-4o-mini-synthetic,1.69,1.69
+1814906,Chongqing,CN,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+1814906,Chongqing,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+1814906,Chongqing,CN,pop_en,en,gpt-4o-mini-synthetic,6.79,6.79
+1819729,Hong Kong,HK,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+1819729,Hong Kong,HK,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1819729,Hong Kong,HK,pop_en,en,gpt-4o-mini-synthetic,6.91,6.91
+98182,Baghdad,IQ,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+98182,Baghdad,IQ,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+98182,Baghdad,IQ,pop_en,en,gpt-4o-mini-synthetic,6.09,6.09
+1797929,Qingdao,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1797929,Qingdao,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+1797929,Qingdao,CN,pop_en,en,gpt-4o-mini-synthetic,9.14,9.14
+112931,Tehran,IR,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+112931,Tehran,IR,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+112931,Tehran,IR,pop_en,en,gpt-4o-mini-synthetic,8.25,8.25
+2034937,Shenyang,CN,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+2034937,Shenyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+2034937,Shenyang,CN,pop_en,en,gpt-4o-mini-synthetic,5.57,5.57
+1269843,Hyderabad,IN,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+1269843,Hyderabad,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1269843,Hyderabad,IN,pop_en,en,gpt-4o-mini-synthetic,3.92,3.92
+1886760,Suzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1886760,Suzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1886760,Suzhou,CN,pop_en,en,gpt-4o-mini-synthetic,6.73,6.73
+1279233,Ahmedabad,IN,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+1279233,Ahmedabad,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+1279233,Ahmedabad,IN,pop_en,en,gpt-4o-mini-synthetic,5.56,5.56
+1880252,Singapore,SG,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1880252,Singapore,SG,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1880252,Singapore,SG,pop_en,en,gpt-4o-mini-synthetic,5.37,5.37
+2037013,Harbin,CN,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+2037013,Harbin,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+2037013,Harbin,CN,pop_en,en,gpt-4o-mini-synthetic,5.52,5.52
+1609350,Bangkok,TH,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+1609350,Bangkok,TH,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1609350,Bangkok,TH,pop_en,en,gpt-4o-mini-synthetic,2.17,2.17
+1808722,Hefei,CN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1808722,Hefei,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1808722,Hefei,CN,pop_en,en,gpt-4o-mini-synthetic,8.78,8.78
+1814087,Dalian,CN,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+1814087,Dalian,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1814087,Dalian,CN,pop_en,en,gpt-4o-mini-synthetic,4.86,4.86
+1168197,Peshawar,PK,qol_en,en,gpt-4o-mini-synthetic,5.3,5.3
+1168197,Peshawar,PK,qol_zh,zh,gpt-4o-mini-synthetic,5.6,5.6
+1168197,Peshawar,PK,pop_en,en,gpt-4o-mini-synthetic,5.83,5.83
+2038180,Changchun,CN,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+2038180,Changchun,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+2038180,Changchun,CN,pop_en,en,gpt-4o-mini-synthetic,6.7,6.7
+105343,Jeddah,SA,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+105343,Jeddah,SA,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+105343,Jeddah,SA,pop_en,en,gpt-4o-mini-synthetic,7.78,7.78
+1264527,Chennai,IN,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+1264527,Chennai,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.5,5.5
+1264527,Chennai,IN,pop_en,en,gpt-4o-mini-synthetic,4.82,4.82
+1275004,Kolkata,IN,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+1275004,Kolkata,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.6,5.6
+1275004,Kolkata,IN,pop_en,en,gpt-4o-mini-synthetic,4.73,4.73
+1790645,Xiamen,CN,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+1790645,Xiamen,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1790645,Xiamen,CN,pop_en,en,gpt-4o-mini-synthetic,3.34,3.34
+1255364,Surat,IN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1255364,Surat,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1255364,Surat,IN,pop_en,en,gpt-4o-mini-synthetic,4.15,4.15
+1298824,Yangon,MM,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1298824,Yangon,MM,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1298824,Yangon,MM,pop_en,en,gpt-4o-mini-synthetic,4.78,4.78
+13308620,Bao'an,CN,qol_en,en,gpt-4o-mini-synthetic,8.3,8.3
+13308620,Bao'an,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+13308620,Bao'an,CN,pop_en,en,gpt-4o-mini-synthetic,4.72,4.72
+1138958,Kabul,AF,qol_en,en,gpt-4o-mini-synthetic,5.9,5.9
+1138958,Kabul,AF,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1138958,Kabul,AF,pop_en,en,gpt-4o-mini-synthetic,2.79,2.79
+1790923,Wuxi,CN,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+1790923,Wuxi,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+1790923,Wuxi,CN,pop_en,en,gpt-4o-mini-synthetic,4.79,4.79
+1805753,Jinan,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1805753,Jinan,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1805753,Jinan,CN,pop_en,en,gpt-4o-mini-synthetic,3.45,3.45
+1793511,Taiyuan,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1793511,Taiyuan,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1793511,Taiyuan,CN,pop_en,en,gpt-4o-mini-synthetic,3.38,3.38
+1784658,Zhengzhou,CN,qol_en,en,gpt-4o-mini-synthetic,8.7,8.7
+1784658,Zhengzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.8,8.8
+1784658,Zhengzhou,CN,pop_en,en,gpt-4o-mini-synthetic,2.73,2.73
+108410,Riyadh,SA,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+108410,Riyadh,SA,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+108410,Riyadh,SA,pop_en,en,gpt-4o-mini-synthetic,5.2,5.2
+12908892,New Taipei City,TW,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+12908892,New Taipei City,TW,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+12908892,New Taipei City,TW,pop_en,en,gpt-4o-mini-synthetic,5.16,5.16
+12747063,New Territories,HK,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+12747063,New Territories,HK,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+12747063,New Territories,HK,pop_en,en,gpt-4o-mini-synthetic,6.25,6.25
+1795270,Shijiazhuang,CN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1795270,Shijiazhuang,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1795270,Shijiazhuang,CN,pop_en,en,gpt-4o-mini-synthetic,2.89,2.89
+1205733,Chattogram,BD,qol_en,en,gpt-4o-mini-synthetic,5.8,5.8
+1205733,Chattogram,BD,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+1205733,Chattogram,BD,pop_en,en,gpt-4o-mini-synthetic,4.32,4.32
+1804651,Kunming,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1804651,Kunming,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1804651,Kunming,CN,pop_en,en,gpt-4o-mini-synthetic,3.87,3.87
+6986104,Zhongshan,CN,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+6986104,Zhongshan,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+6986104,Zhongshan,CN,pop_en,en,gpt-4o-mini-synthetic,6.98,6.98
+1799869,Nanning,CN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1799869,Nanning,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1799869,Nanning,CN,pop_en,en,gpt-4o-mini-synthetic,2.61,2.61
+1795940,Shantou,CN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1795940,Shantou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1795940,Shantou,CN,pop_en,en,gpt-4o-mini-synthetic,4.66,4.66
+1179400,Faisalabad,PK,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1179400,Faisalabad,PK,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1179400,Faisalabad,PK,pop_en,en,gpt-4o-mini-synthetic,2.83,2.83
+292223,Dubai,AE,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+292223,Dubai,AE,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+292223,Dubai,AE,pop_en,en,gpt-4o-mini-synthetic,4.76,4.76
+1848354,Yokohama,JP,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1848354,Yokohama,JP,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1848354,Yokohama,JP,pop_en,en,gpt-4o-mini-synthetic,3.97,3.97
+1810821,Fuzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+1810821,Fuzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1810821,Fuzhou,CN,pop_en,en,gpt-4o-mini-synthetic,3.91,3.91
+1799397,Ningbo,CN,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+1799397,Ningbo,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+1799397,Ningbo,CN,pop_en,en,gpt-4o-mini-synthetic,4.13,4.13
+1798425,Puyang,CN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1798425,Puyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+1798425,Puyang,CN,pop_en,en,gpt-4o-mini-synthetic,4.72,4.72
+323786,Ankara,TR,qol_en,en,gpt-4o-mini-synthetic,5.4,5.4
+323786,Ankara,TR,qol_zh,zh,gpt-4o-mini-synthetic,5.2,5.2
+323786,Ankara,TR,pop_en,en,gpt-4o-mini-synthetic,4.06,4.06
+1794903,Shiyan,CN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1794903,Shiyan,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+1794903,Shiyan,CN,pop_en,en,gpt-4o-mini-synthetic,7.46,7.46
+1793346,Tangshan,CN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1793346,Tangshan,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+1793346,Tangshan,CN,pop_en,en,gpt-4o-mini-synthetic,4.34,4.34
+1166993,Rawalpindi,PK,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1166993,Rawalpindi,PK,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1166993,Rawalpindi,PK,pop_en,en,gpt-4o-mini-synthetic,4.12,4.12
+13512505,Lüliang,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+13512505,Lüliang,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+13512505,Lüliang,CN,pop_en,en,gpt-4o-mini-synthetic,2.86,2.86
+1838524,Busan,KR,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1838524,Busan,KR,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+1838524,Busan,KR,pop_en,en,gpt-4o-mini-synthetic,1.47,1.47
+1815456,Changzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1815456,Changzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1815456,Changzhou,CN,pop_en,en,gpt-4o-mini-synthetic,2.82,2.82
+1871859,Pyongyang,KP,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1871859,Pyongyang,KP,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1871859,Pyongyang,KP,pop_en,en,gpt-4o-mini-synthetic,2.18,2.18
+1785286,Zibo,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1785286,Zibo,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1785286,Zibo,CN,pop_en,en,gpt-4o-mini-synthetic,2.44,2.44
+1259229,Pune,IN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1259229,Pune,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1259229,Pune,IN,pop_en,en,gpt-4o-mini-synthetic,2.51,2.51
+750269,Bursa,TR,qol_en,en,gpt-4o-mini-synthetic,8.3,8.3
+750269,Bursa,TR,qol_zh,zh,gpt-4o-mini-synthetic,8.5,8.5
+750269,Bursa,TR,pop_en,en,gpt-4o-mini-synthetic,1.22,1.22
+1815577,Changsha,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1815577,Changsha,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1815577,Changsha,CN,pop_en,en,gpt-4o-mini-synthetic,3.89,3.89
+1692192,Quezon City,PH,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+1692192,Quezon City,PH,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+1692192,Quezon City,PH,pop_en,en,gpt-4o-mini-synthetic,3.55,3.55
+1269515,Jaipur,IN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1269515,Jaipur,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1269515,Jaipur,IN,pop_en,en,gpt-4o-mini-synthetic,2.74,2.74
+1843564,Incheon,KR,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+1843564,Incheon,KR,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1843564,Incheon,KR,pop_en,en,gpt-4o-mini-synthetic,4.65,4.65
+1809461,Guiyang,CN,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+1809461,Guiyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1809461,Guiyang,CN,pop_en,en,gpt-4o-mini-synthetic,3.87,3.87
+1529102,Ürümqi,CN,qol_en,en,gpt-4o-mini-synthetic,8.9,8.9
+1529102,Ürümqi,CN,qol_zh,zh,gpt-4o-mini-synthetic,9.2,9.2
+1529102,Ürümqi,CN,pop_en,en,gpt-4o-mini-synthetic,1.65,1.65
+1804430,Lanzhou,CN,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1804430,Lanzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1804430,Lanzhou,CN,pop_en,en,gpt-4o-mini-synthetic,2.36,2.36
+311046,İzmir,TR,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+311046,İzmir,TR,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+311046,İzmir,TR,pop_en,en,gpt-4o-mini-synthetic,2.12,2.12
+1806776,Huizhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1806776,Huizhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+1806776,Huizhou,CN,pop_en,en,gpt-4o-mini-synthetic,2.01,2.01
+1625822,Surabaya,ID,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1625822,Surabaya,ID,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+1625822,Surabaya,ID,pop_en,en,gpt-4o-mini-synthetic,4.28,4.28
+1809078,Haikou,CN,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+1809078,Haikou,CN,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+1809078,Haikou,CN,pop_en,en,gpt-4o-mini-synthetic,2.99,2.99
+1668399,Taichung,TW,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1668399,Taichung,TW,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1668399,Taichung,TW,pop_en,en,gpt-4o-mini-synthetic,3.84,3.84
+1267995,Kanpur,IN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1267995,Kanpur,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+1267995,Kanpur,IN,pop_en,en,gpt-4o-mini-synthetic,3.21,3.21
+1853909,Osaka,JP,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1853909,Osaka,JP,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+1853909,Osaka,JP,pop_en,en,gpt-4o-mini-synthetic,2.81,2.81
+1803318,Linyi,CN,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+1803318,Linyi,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+1803318,Linyi,CN,pop_en,en,gpt-4o-mini-synthetic,3.29,3.29
+1816971,Baoding,CN,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+1816971,Baoding,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+1816971,Baoding,CN,pop_en,en,gpt-4o-mini-synthetic,4.49,4.49
+1673820,Kaohsiung,TW,qol_en,en,gpt-4o-mini-synthetic,5.0,5.0
+1673820,Kaohsiung,TW,qol_zh,zh,gpt-4o-mini-synthetic,4.9,4.9
+1673820,Kaohsiung,TW,pop_en,en,gpt-4o-mini-synthetic,3.22,3.22
+1200109,Gazipur,BD,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1200109,Gazipur,BD,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1200109,Gazipur,BD,pop_en,en,gpt-4o-mini-synthetic,2.51,2.51
+1791388,Wenzhou,CN,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1791388,Wenzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1791388,Wenzhou,CN,pop_en,en,gpt-4o-mini-synthetic,3.33,3.33
+1581298,Haiphong,VN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1581298,Haiphong,VN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1581298,Haiphong,VN,pop_en,en,gpt-4o-mini-synthetic,3.33,3.33
+1785725,Yunfu,CN,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+1785725,Yunfu,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1785725,Yunfu,CN,pop_en,en,gpt-4o-mini-synthetic,3.11,3.11
+6619347,Navi Mumbai,IN,qol_en,en,gpt-4o-mini-synthetic,5.8,5.8
+6619347,Navi Mumbai,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.7,5.7
+6619347,Navi Mumbai,IN,pop_en,en,gpt-4o-mini-synthetic,3.18,3.18
+1649378,Bekasi,ID,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+1649378,Bekasi,ID,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1649378,Bekasi,ID,pop_en,en,gpt-4o-mini-synthetic,2.66,2.66
+1177662,Gujranwala,PK,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+1177662,Gujranwala,PK,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1177662,Gujranwala,PK,pop_en,en,gpt-4o-mini-synthetic,2.92,2.92
+1797873,Huai'an,CN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1797873,Huai'an,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1797873,Huai'an,CN,pop_en,en,gpt-4o-mini-synthetic,3.32,3.32
+1264733,Lucknow,IN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1264733,Lucknow,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1264733,Lucknow,IN,pop_en,en,gpt-4o-mini-synthetic,3.44,3.44
+1650357,Bandung,ID,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1650357,Bandung,ID,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1650357,Bandung,ID,pop_en,en,gpt-4o-mini-synthetic,2.22,2.22
+1214520,Medan,ID,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1214520,Medan,ID,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1214520,Medan,ID,pop_en,en,gpt-4o-mini-synthetic,2.51,2.51
+1262180,Nagpur,IN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1262180,Nagpur,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1262180,Nagpur,IN,pop_en,en,gpt-4o-mini-synthetic,3.92,3.92
+1835329,Daegu,KR,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1835329,Daegu,KR,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1835329,Daegu,KR,pop_en,en,gpt-4o-mini-synthetic,3.19,3.19
+1800163,Nanchang,CN,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1800163,Nanchang,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+1800163,Nanchang,CN,pop_en,en,gpt-4o-mini-synthetic,2.8,2.8
+2036892,Hohhot,CN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+2036892,Hohhot,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+2036892,Hohhot,CN,pop_en,en,gpt-4o-mini-synthetic,2.4,2.4
+1856057,Nagoya,JP,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+1856057,Nagoya,JP,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1856057,Nagoya,JP,pop_en,en,gpt-4o-mini-synthetic,2.23,2.23
+124665,Mashhad,IR,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+124665,Mashhad,IR,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+124665,Mashhad,IR,pop_en,en,gpt-4o-mini-synthetic,2.59,2.59
+1795855,Shaoxing,CN,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1795855,Shaoxing,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1795855,Shaoxing,CN,pop_en,en,gpt-4o-mini-synthetic,2.47,2.47
+1799722,Nantong,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1799722,Nantong,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1799722,Nantong,CN,pop_en,en,gpt-4o-mini-synthetic,1.95,1.95
+1819609,Kowloon,HK,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+1819609,Kowloon,HK,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+1819609,Kowloon,HK,pop_en,en,gpt-4o-mini-synthetic,1.29,1.29
+1787093,Yantai,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1787093,Yantai,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1787093,Yantai,CN,pop_en,en,gpt-4o-mini-synthetic,2.44,2.44
+1790437,Zhuhai,CN,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+1790437,Zhuhai,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.6,8.6
+1790437,Zhuhai,CN,pop_en,en,gpt-4o-mini-synthetic,2.1,2.1
+1169825,Multan,PK,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+1169825,Multan,PK,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+1169825,Multan,PK,pop_en,en,gpt-4o-mini-synthetic,2.16,2.16
+2038432,Baotou,CN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+2038432,Baotou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+2038432,Baotou,CN,pop_en,en,gpt-4o-mini-synthetic,1.62,1.62
+1645524,Depok,ID,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1645524,Depok,ID,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+1645524,Depok,ID,pop_en,en,gpt-4o-mini-synthetic,2.08,2.08
+1273865,Coimbatore,IN,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1273865,Coimbatore,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1273865,Coimbatore,IN,pop_en,en,gpt-4o-mini-synthetic,1.88,1.88
+314830,Gaziantep,TR,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+314830,Gaziantep,TR,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+314830,Gaziantep,TR,pop_en,en,gpt-4o-mini-synthetic,2.19,2.19
+12359313,Qingyang,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+12359313,Qingyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+12359313,Qingyang,CN,pop_en,en,gpt-4o-mini-synthetic,2.44,2.44
+170063,Aleppo,SY,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+170063,Aleppo,SY,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+170063,Aleppo,SY,pop_en,en,gpt-4o-mini-synthetic,3.45,3.45
+1785623,Kunshan,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1785623,Kunshan,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+1785623,Kunshan,CN,pop_en,en,gpt-4o-mini-synthetic,2.21,2.21
+99071,Al Mawşil al Jadīdah,IQ,qol_en,en,gpt-4o-mini-synthetic,8.6,8.6
+99071,Al Mawşil al Jadīdah,IQ,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+99071,Al Mawşil al Jadīdah,IQ,pop_en,en,gpt-4o-mini-synthetic,1.55,1.55
+1791681,Weifang,CN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1791681,Weifang,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1791681,Weifang,CN,pop_en,en,gpt-4o-mini-synthetic,1.72,1.72
+1783621,Zunyi,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1783621,Zunyi,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1783621,Zunyi,CN,pop_en,en,gpt-4o-mini-synthetic,2.25,2.25
+388349,Al Başrah al Qadīmah,IQ,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+388349,Al Başrah al Qadīmah,IQ,qol_zh,zh,gpt-4o-mini-synthetic,8.6,8.6
+388349,Al Başrah al Qadīmah,IQ,pop_en,en,gpt-4o-mini-synthetic,1.67,1.67
+10859300,Lianyungang,CN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+10859300,Lianyungang,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+10859300,Lianyungang,CN,pop_en,en,gpt-4o-mini-synthetic,1.21,1.21
+1269743,Indore,IN,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+1269743,Indore,IN,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+1269743,Indore,IN,pop_en,en,gpt-4o-mini-synthetic,1.71,1.71
+1512569,Tashkent,UZ,qol_en,en,gpt-4o-mini-synthetic,5.2,5.2
+1512569,Tashkent,UZ,qol_zh,zh,gpt-4o-mini-synthetic,5.6,5.6
+1512569,Tashkent,UZ,pop_en,en,gpt-4o-mini-synthetic,1.91,1.91
+1810638,Ganzhou,CN,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+1810638,Ganzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1810638,Ganzhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.62,1.62
+1526384,Almaty,KZ,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1526384,Almaty,KZ,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1526384,Almaty,KZ,pop_en,en,gpt-4o-mini-synthetic,1.71,1.71
+2128295,Sapporo,JP,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+2128295,Sapporo,JP,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+2128295,Sapporo,JP,pop_en,en,gpt-4o-mini-synthetic,1.89,1.89
+8347664,Ordos,CN,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+8347664,Ordos,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+8347664,Ordos,CN,pop_en,en,gpt-4o-mini-synthetic,2.35,2.35
+71137,Sanaa,YE,qol_en,en,gpt-4o-mini-synthetic,5.0,5.0
+71137,Sanaa,YE,qol_zh,zh,gpt-4o-mini-synthetic,4.5,4.5
+71137,Sanaa,YE,pop_en,en,gpt-4o-mini-synthetic,2.68,2.68
+1176734,Hyderabad,PK,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1176734,Hyderabad,PK,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+1176734,Hyderabad,PK,pop_en,en,gpt-4o-mini-synthetic,2.82,2.82
+276781,Beirut,LB,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+276781,Beirut,LB,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+276781,Beirut,LB,pop_en,en,gpt-4o-mini-synthetic,1.95,1.95
+1625084,Tangerang,ID,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+1625084,Tangerang,ID,qol_zh,zh,gpt-4o-mini-synthetic,8.9,8.9
+1625084,Tangerang,ID,pop_en,en,gpt-4o-mini-synthetic,1.77,1.77
+1797121,Jieyang,CN,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+1797121,Jieyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+1797121,Jieyang,CN,pop_en,en,gpt-4o-mini-synthetic,2.68,2.68
+2036502,Jilin,CN,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+2036502,Jilin,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+2036502,Jilin,CN,pop_en,en,gpt-4o-mini-synthetic,2.5,2.5
+1800146,Nanchong,CN,qol_en,en,gpt-4o-mini-synthetic,5.8,5.8
+1800146,Nanchong,CN,qol_zh,zh,gpt-4o-mini-synthetic,5.4,5.4
+1800146,Nanchong,CN,pop_en,en,gpt-4o-mini-synthetic,0.72,0.72
+1668355,Tainan,TW,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+1668355,Tainan,TW,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1668355,Tainan,TW,pop_en,en,gpt-4o-mini-synthetic,2.69,2.69
+2037799,Datong,CN,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+2037799,Datong,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+2037799,Datong,CN,pop_en,en,gpt-4o-mini-synthetic,1.08,1.08
+1715348,Davao,PH,qol_en,en,gpt-4o-mini-synthetic,5.3,5.3
+1715348,Davao,PH,qol_zh,zh,gpt-4o-mini-synthetic,5.3,5.3
+1715348,Davao,PH,pop_en,en,gpt-4o-mini-synthetic,2.06,2.06
+1254661,Thāne,IN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1254661,Thāne,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+1254661,Thāne,IN,pop_en,en,gpt-4o-mini-synthetic,1.79,1.79
+1253573,Vadodara,IN,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+1253573,Vadodara,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.7,5.7
+1253573,Vadodara,IN,pop_en,en,gpt-4o-mini-synthetic,2.02,2.02
+325363,Adana,TR,qol_en,en,gpt-4o-mini-synthetic,5.8,5.8
+325363,Adana,TR,qol_zh,zh,gpt-4o-mini-synthetic,5.6,5.6
+325363,Adana,TR,pop_en,en,gpt-4o-mini-synthetic,1.24,1.24
+1799629,Nanyang,CN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1799629,Nanyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1799629,Nanyang,CN,pop_en,en,gpt-4o-mini-synthetic,1.28,1.28
+292968,Abu Dhabi,AE,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+292968,Abu Dhabi,AE,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+292968,Abu Dhabi,AE,pop_en,en,gpt-4o-mini-synthetic,1.38,1.38
+292672,Sharjah,AE,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+292672,Sharjah,AE,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+292672,Sharjah,AE,pop_en,en,gpt-4o-mini-synthetic,1.5,1.5
+1275841,Bhopal,IN,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+1275841,Bhopal,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1275841,Bhopal,IN,pop_en,en,gpt-4o-mini-synthetic,1.82,1.82
+1806299,Jiangmen,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1806299,Jiangmen,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1806299,Jiangmen,CN,pop_en,en,gpt-4o-mini-synthetic,1.73,1.73
+316541,Diyarbakır,TR,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+316541,Diyarbakır,TR,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+316541,Diyarbakır,TR,pop_en,en,gpt-4o-mini-synthetic,2.2,2.2
+1815251,Jiangyin,CN,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1815251,Jiangyin,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1815251,Jiangyin,CN,pop_en,en,gpt-4o-mini-synthetic,1.63,1.63
+1810845,Fuyang,CN,qol_en,en,gpt-4o-mini-synthetic,5.4,5.4
+1810845,Fuyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,4.9,4.9
+1810845,Fuyang,CN,pop_en,en,gpt-4o-mini-synthetic,2.49,2.49
+11838258,Bayan Nur,CN,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+11838258,Bayan Nur,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+11838258,Bayan Nur,CN,pop_en,en,gpt-4o-mini-synthetic,2.06,2.06
+1815395,Chaozhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+1815395,Chaozhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+1815395,Chaozhou,CN,pop_en,en,gpt-4o-mini-synthetic,2.34,2.34
+1797945,Qingyuan,CN,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+1797945,Qingyuan,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1797945,Qingyuan,CN,pop_en,en,gpt-4o-mini-synthetic,0.9,0.9
+1793724,Tai’an,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1793724,Tai’an,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1793724,Tai’an,CN,pop_en,en,gpt-4o-mini-synthetic,0.99,0.99
+1258393,Rasapūdipalem,IN,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+1258393,Rasapūdipalem,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.7,5.7
+1258393,Rasapūdipalem,IN,pop_en,en,gpt-4o-mini-synthetic,2.6,2.6
+7626690,Pimpri-Chinchwad,IN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+7626690,Pimpri-Chinchwad,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+7626690,Pimpri-Chinchwad,IN,pop_en,en,gpt-4o-mini-synthetic,2.49,2.49
+1720151,Caloocan,PH,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1720151,Caloocan,PH,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1720151,Caloocan,PH,pop_en,en,gpt-4o-mini-synthetic,2.5,2.5
+1260086,Patna,IN,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+1260086,Patna,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1260086,Patna,IN,pop_en,en,gpt-4o-mini-synthetic,1.59,1.59
+99072,Mosul,IQ,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+99072,Mosul,IQ,qol_zh,zh,gpt-4o-mini-synthetic,5.7,5.7
+99072,Mosul,IQ,pop_en,en,gpt-4o-mini-synthetic,2.15,2.15
+12165956,Kallakurichi,IN,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+12165956,Kallakurichi,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+12165956,Kallakurichi,IN,pop_en,en,gpt-4o-mini-synthetic,1.97,1.97
+1788852,Xining,CN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1788852,Xining,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1788852,Xining,CN,pop_en,en,gpt-4o-mini-synthetic,1.38,1.38
+7283386,Changshu,CN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+7283386,Changshu,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+7283386,Changshu,CN,pop_en,en,gpt-4o-mini-synthetic,1.26,1.26
+1633070,Palembang,ID,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1633070,Palembang,ID,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1633070,Palembang,ID,pop_en,en,gpt-4o-mini-synthetic,1.55,1.55
+1807681,Huainan,CN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1807681,Huainan,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+1807681,Huainan,CN,pop_en,en,gpt-4o-mini-synthetic,2.04,2.04
+1627896,Semarang,ID,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1627896,Semarang,ID,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+1627896,Semarang,ID,pop_en,en,gpt-4o-mini-synthetic,1.7,1.7
+1793743,Suzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1793743,Suzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1793743,Suzhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.92,1.92
+1802206,Lu’an,CN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1802206,Lu’an,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1802206,Lu’an,CN,pop_en,en,gpt-4o-mini-synthetic,1.27,1.27
+1264728,Ludhiana,IN,qol_en,en,gpt-4o-mini-synthetic,5.1,5.1
+1264728,Ludhiana,IN,qol_zh,zh,gpt-4o-mini-synthetic,4.6,4.6
+1264728,Ludhiana,IN,pop_en,en,gpt-4o-mini-synthetic,1.64,1.64
+1787746,Yancheng,CN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1787746,Yancheng,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1787746,Yancheng,CN,pop_en,en,gpt-4o-mini-synthetic,1.93,1.93
+95446,Erbil,IQ,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+95446,Erbil,IQ,qol_zh,zh,gpt-4o-mini-synthetic,5.5,5.5
+95446,Erbil,IQ,pop_en,en,gpt-4o-mini-synthetic,1.03,1.03
+1863967,Fukuoka,JP,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+1863967,Fukuoka,JP,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1863967,Fukuoka,JP,pop_en,en,gpt-4o-mini-synthetic,1.2,1.2
+1793505,Taizhou,CN,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+1793505,Taizhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1793505,Taizhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.33,1.33
+2037860,Daqing,CN,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+2037860,Daqing,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+2037860,Daqing,CN,pop_en,en,gpt-4o-mini-synthetic,1.86,1.86
+1701668,Manila,PH,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1701668,Manila,PH,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1701668,Manila,PH,pop_en,en,gpt-4o-mini-synthetic,1.22,1.22
+1791236,Wuhu,CN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1791236,Wuhu,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+1791236,Wuhu,CN,pop_en,en,gpt-4o-mini-synthetic,1.78,1.78
+1813325,Dazhou,CN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1813325,Dazhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1813325,Dazhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.52,1.52
+1787227,Yangzhou,CN,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+1787227,Yangzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+1787227,Yangzhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.74,1.74
+104515,Makkah,SA,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+104515,Makkah,SA,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+104515,Makkah,SA,pop_en,en,gpt-4o-mini-synthetic,1.37,1.37
+1821306,Phnom Penh,KH,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1821306,Phnom Penh,KH,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+1821306,Phnom Penh,KH,pop_en,en,gpt-4o-mini-synthetic,1.71,1.71
+1809498,Guilin,CN,qol_en,en,gpt-4o-mini-synthetic,8.9,8.9
+1809498,Guilin,CN,qol_zh,zh,gpt-4o-mini-synthetic,9.1,9.1
+1809498,Guilin,CN,pop_en,en,gpt-4o-mini-synthetic,1.42,1.42
+170654,Damascus,SY,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+170654,Damascus,SY,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+170654,Damascus,SY,pop_en,en,gpt-4o-mini-synthetic,0.61,0.61
+1167528,Quetta,PK,qol_en,en,gpt-4o-mini-synthetic,5.4,5.4
+1167528,Quetta,PK,qol_zh,zh,gpt-4o-mini-synthetic,4.9,4.9
+1167528,Quetta,PK,pop_en,en,gpt-4o-mini-synthetic,1.4,1.4
+1784853,Zhaoqing,CN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1784853,Zhaoqing,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1784853,Zhaoqing,CN,pop_en,en,gpt-4o-mini-synthetic,1.71,1.71
+1800627,Mianyang,CN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1800627,Mianyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1800627,Mianyang,CN,pop_en,en,gpt-4o-mini-synthetic,0.52,0.52
+418863,Isfahan,IR,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+418863,Isfahan,IR,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+418863,Isfahan,IR,pop_en,en,gpt-4o-mini-synthetic,0.86,0.86
+12358576,Wanzhou,CN,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+12358576,Wanzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+12358576,Wanzhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.35,1.35
+1798449,Putian,CN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1798449,Putian,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+1798449,Putian,CN,pop_en,en,gpt-4o-mini-synthetic,1.62,1.62
+1859642,Kawasaki,JP,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1859642,Kawasaki,JP,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1859642,Kawasaki,JP,pop_en,en,gpt-4o-mini-synthetic,1.15,1.15
+1783934,Shangqiu,CN,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+1783934,Shangqiu,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+1783934,Shangqiu,CN,pop_en,en,gpt-4o-mini-synthetic,1.57,1.57
+1859171,Kobe,JP,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1859171,Kobe,JP,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1859171,Kobe,JP,pop_en,en,gpt-4o-mini-synthetic,1.68,1.68
+1586203,Cần Thơ,VN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1586203,Cần Thơ,VN,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1586203,Cần Thơ,VN,pop_en,en,gpt-4o-mini-synthetic,1.39,1.39
+1336135,Khulna,BD,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+1336135,Khulna,BD,qol_zh,zh,gpt-4o-mini-synthetic,5.6,5.6
+1336135,Khulna,BD,pop_en,en,gpt-4o-mini-synthetic,1.67,1.67
+1786657,Yinchuan,CN,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1786657,Yinchuan,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1786657,Yinchuan,CN,pop_en,en,gpt-4o-mini-synthetic,1.88,1.88
+1261731,Nashik,IN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1261731,Nashik,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1261731,Nashik,IN,pop_en,en,gpt-4o-mini-synthetic,2.32,2.32
+8400694,Taizhou,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+8400694,Taizhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+8400694,Taizhou,CN,pop_en,en,gpt-4o-mini-synthetic,0.69,0.69
+1814870,Yiwu,CN,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+1814870,Yiwu,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.6,8.6
+1814870,Yiwu,CN,pop_en,en,gpt-4o-mini-synthetic,1.46,1.46
+1835235,Daejeon,KR,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+1835235,Daejeon,KR,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1835235,Daejeon,KR,pop_en,en,gpt-4o-mini-synthetic,2.55,2.55
+1797353,Quanzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+1797353,Quanzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1797353,Quanzhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.79,1.79
+1264521,Madurai,IN,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+1264521,Madurai,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+1264521,Madurai,IN,pop_en,en,gpt-4o-mini-synthetic,1.12,1.12
+1805528,Jinhua,CN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1805528,Jinhua,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+1805528,Jinhua,CN,pop_en,en,gpt-4o-mini-synthetic,2.05,2.05
+1857910,Kyoto,JP,qol_en,en,gpt-4o-mini-synthetic,8.9,8.9
+1857910,Kyoto,JP,qol_zh,zh,gpt-4o-mini-synthetic,8.7,8.7
+1857910,Kyoto,JP,pop_en,en,gpt-4o-mini-synthetic,1.03,1.03
+1806602,Cixi,CN,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+1806602,Cixi,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1806602,Cixi,CN,pop_en,en,gpt-4o-mini-synthetic,1.94,1.94
+1791121,Changde,CN,qol_en,en,gpt-4o-mini-synthetic,5.9,5.9
+1791121,Changde,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+1791121,Changde,CN,pop_en,en,gpt-4o-mini-synthetic,1.39,1.39
+1735161,Kuala Lumpur,MY,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1735161,Kuala Lumpur,MY,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1735161,Kuala Lumpur,MY,pop_en,en,gpt-4o-mini-synthetic,0.73,0.73
+1804879,Kaifeng,CN,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+1804879,Kaifeng,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+1804879,Kaifeng,CN,pop_en,en,gpt-4o-mini-synthetic,0.89,0.89
+2038632,Anshan,CN,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+2038632,Anshan,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+2038632,Anshan,CN,pop_en,en,gpt-4o-mini-synthetic,2.18,2.18
+128747,Karaj,IR,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+128747,Karaj,IR,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+128747,Karaj,IR,pop_en,en,gpt-4o-mini-synthetic,1.34,1.34
+1283240,Kathmandu,NP,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+1283240,Kathmandu,NP,qol_zh,zh,gpt-4o-mini-synthetic,5.2,5.2
+1283240,Kathmandu,NP,pop_en,en,gpt-4o-mini-synthetic,1.42,1.42
+10942359,Baoji,CN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+10942359,Baoji,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+10942359,Baoji,CN,pop_en,en,gpt-4o-mini-synthetic,2.24,2.24
+1793771,Suqian,CN,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+1793771,Suqian,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+1793771,Suqian,CN,pop_en,en,gpt-4o-mini-synthetic,0.96,0.96
+1803300,Liuzhou,CN,qol_en,en,gpt-4o-mini-synthetic,9.3,9.3
+1803300,Liuzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,9.3,9.3
+1803300,Liuzhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.44,1.44
+1254361,Tirunelveli,IN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1254361,Tirunelveli,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1254361,Tirunelveli,IN,pop_en,en,gpt-4o-mini-synthetic,1.37,1.37
+308464,Kayseri,TR,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+308464,Kayseri,TR,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+308464,Kayseri,TR,pop_en,en,gpt-4o-mini-synthetic,1.42,1.42
+306571,Konya,TR,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+306571,Konya,TR,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+306571,Konya,TR,pop_en,en,gpt-4o-mini-synthetic,1.48,1.48
+1787331,Zhangjiagang,CN,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+1787331,Zhangjiagang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+1787331,Zhangjiagang,CN,pop_en,en,gpt-4o-mini-synthetic,0.29,0.29
+1279259,Agra,IN,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+1279259,Agra,IN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1279259,Agra,IN,pop_en,en,gpt-4o-mini-synthetic,0.54,0.54
+113646,Tabriz,IR,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+113646,Tabriz,IR,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+113646,Tabriz,IR,pop_en,en,gpt-4o-mini-synthetic,0.82,0.82
+1622786,Makassar,ID,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+1622786,Makassar,ID,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+1622786,Makassar,ID,pop_en,en,gpt-4o-mini-synthetic,2.17,2.17
+1797658,Jinjiang,CN,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+1797658,Jinjiang,CN,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+1797658,Jinjiang,CN,pop_en,en,gpt-4o-mini-synthetic,1.72,1.72
+1271951,Faridabad,IN,qol_en,en,gpt-4o-mini-synthetic,5.6,5.6
+1271951,Faridabad,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.4,5.4
+1271951,Faridabad,IN,pop_en,en,gpt-4o-mini-synthetic,1.62,1.62
+1816234,Bozhou,CN,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+1816234,Bozhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+1816234,Bozhou,CN,pop_en,en,gpt-4o-mini-synthetic,1.31,1.31
+1797318,Qujing,CN,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+1797318,Qujing,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1797318,Qujing,CN,pop_en,en,gpt-4o-mini-synthetic,1.6,1.6
+8581443,South Tangerang,ID,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+8581443,South Tangerang,ID,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+8581443,South Tangerang,ID,pop_en,en,gpt-4o-mini-synthetic,0.95,0.95
+1784990,Zhanjiang,CN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1784990,Zhanjiang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+1784990,Zhanjiang,CN,pop_en,en,gpt-4o-mini-synthetic,1.27,1.27
+2037355,Fushun,CN,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+2037355,Fushun,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+2037355,Fushun,CN,pop_en,en,gpt-4o-mini-synthetic,1.79,1.79
+1841811,Gwangju,KR,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+1841811,Gwangju,KR,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1841811,Gwangju,KR,pop_en,en,gpt-4o-mini-synthetic,1.84,1.84
+1258847,Rājkot,IN,qol_en,en,gpt-4o-mini-synthetic,5.9,5.9
+1258847,Rājkot,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.5,5.5
+1258847,Rājkot,IN,pop_en,en,gpt-4o-mini-synthetic,0.74,0.74
+1801792,Luoyang,CN,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+1801792,Luoyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1801792,Luoyang,CN,pop_en,en,gpt-4o-mini-synthetic,2.12,2.12
+1802875,Guankou,CN,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+1802875,Guankou,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+1802875,Guankou,CN,pop_en,en,gpt-4o-mini-synthetic,1.47,1.47
+1580240,Huế,VN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1580240,Huế,VN,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+1580240,Huế,VN,pop_en,en,gpt-4o-mini-synthetic,1.55,1.55
+1262111,Najafgarh,IN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1262111,Najafgarh,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1262111,Najafgarh,IN,pop_en,en,gpt-4o-mini-synthetic,1.41,1.41
+1808963,Handan,CN,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+1808963,Handan,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1808963,Handan,CN,pop_en,en,gpt-4o-mini-synthetic,1.34,1.34
+1183460,Bannu,PK,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1183460,Bannu,PK,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+1183460,Bannu,PK,pop_en,en,gpt-4o-mini-synthetic,0.81,0.81
+1786764,Yichang,CN,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1786764,Yichang,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+1786764,Yichang,CN,pop_en,en,gpt-4o-mini-synthetic,1.28,1.28
+1808198,Heze,CN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1808198,Heze,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+1808198,Heze,CN,pop_en,en,gpt-4o-mini-synthetic,1.13,1.13
+323777,Antalya,TR,qol_en,en,gpt-4o-mini-synthetic,5.9,5.9
+323777,Antalya,TR,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+323777,Antalya,TR,pop_en,en,gpt-4o-mini-synthetic,0.95,0.95
+1269300,Jamshedpur,IN,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1269300,Jamshedpur,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+1269300,Jamshedpur,IN,pop_en,en,gpt-4o-mini-synthetic,1.75,1.75
+99532,Basrah,IQ,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+99532,Basrah,IQ,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+99532,Basrah,IQ,pop_en,en,gpt-4o-mini-synthetic,1.72,1.72
+6940394,Saitama,JP,qol_en,en,gpt-4o-mini-synthetic,8.9,8.9
+6940394,Saitama,JP,qol_zh,zh,gpt-4o-mini-synthetic,9.2,9.2
+6940394,Saitama,JP,pop_en,en,gpt-4o-mini-synthetic,0.59,0.59
+1270926,Gorakhpur,IN,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+1270926,Gorakhpur,IN,qol_zh,zh,gpt-4o-mini-synthetic,5.3,5.3
+1270926,Gorakhpur,IN,pop_en,en,gpt-4o-mini-synthetic,1.33,1.33
+8533133,Liupanshui,CN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+8533133,Liupanshui,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+8533133,Liupanshui,CN,pop_en,en,gpt-4o-mini-synthetic,1.39,1.39
+1684308,Taguig,PH,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+1684308,Taguig,PH,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+1684308,Taguig,PH,pop_en,en,gpt-4o-mini-synthetic,0.76,0.76
+1801180,Maoming,CN,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+1801180,Maoming,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+1801180,Maoming,CN,pop_en,en,gpt-4o-mini-synthetic,0.92,0.92
+109223,Madinah,SA,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+109223,Madinah,SA,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+109223,Madinah,SA,pop_en,en,gpt-4o-mini-synthetic,2.33,2.33
+1797551,Qinzhou,CN,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+1797551,Qinzhou,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+1797551,Qinzhou,CN,pop_en,en,gpt-4o-mini-synthetic,0.96,0.96
+1801934,Luohe,CN,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+1801934,Luohe,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+1801934,Luohe,CN,pop_en,en,gpt-4o-mini-synthetic,1.34,1.34
+1790587,Xiangyang,CN,qol_en,en,gpt-4o-mini-synthetic,9.3,9.3
+1790587,Xiangyang,CN,qol_zh,zh,gpt-4o-mini-synthetic,9.2,9.2
+1790587,Xiangyang,CN,pop_en,en,gpt-4o-mini-synthetic,1.74,1.74
+1806408,Yangjiang,CN,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+1806408,Yangjiang,CN,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1806408,Yangjiang,CN,pop_en,en,gpt-4o-mini-synthetic,1.98,1.98
+1786760,Yixing,CN,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1786760,Yixing,CN,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+1786760,Yixing,CN,pop_en,en,gpt-4o-mini-synthetic,1.56,1.56
+1259652,Pimpri,IN,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+1259652,Pimpri,IN,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+1259652,Pimpri,IN,pop_en,en,gpt-4o-mini-synthetic,1.66,1.66
+1583992,Da Nang,VN,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+1583992,Da Nang,VN,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1583992,Da Nang,VN,pop_en,en,gpt-4o-mini-synthetic,1.0,1.0
+524901,Moscow,RU,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+524901,Moscow,RU,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+524901,Moscow,RU,pop_en,en,gpt-4o-mini-synthetic,12.31,12.31
+2643743,London,GB,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+2643743,London,GB,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+2643743,London,GB,pop_en,en,gpt-4o-mini-synthetic,9.98,9.98
+498817,Saint Petersburg,RU,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+498817,Saint Petersburg,RU,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+498817,Saint Petersburg,RU,pop_en,en,gpt-4o-mini-synthetic,7.09,7.09
+2950159,Berlin,DE,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+2950159,Berlin,DE,qol_zh,zh,gpt-4o-mini-synthetic,8.6,8.6
+2950159,Berlin,DE,pop_en,en,gpt-4o-mini-synthetic,3.35,3.35
+3117735,Madrid,ES,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+3117735,Madrid,ES,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+3117735,Madrid,ES,pop_en,en,gpt-4o-mini-synthetic,3.46,3.46
+703448,Kyiv,UA,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+703448,Kyiv,UA,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+703448,Kyiv,UA,pop_en,en,gpt-4o-mini-synthetic,1.89,1.89
+3169070,Rome,IT,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+3169070,Rome,IT,qol_zh,zh,gpt-4o-mini-synthetic,8.5,8.5
+3169070,Rome,IT,pop_en,en,gpt-4o-mini-synthetic,2.79,2.79
+2988507,Paris,FR,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+2988507,Paris,FR,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+2988507,Paris,FR,pop_en,en,gpt-4o-mini-synthetic,2.74,2.74
+683506,Bucharest,RO,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+683506,Bucharest,RO,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+683506,Bucharest,RO,pop_en,en,gpt-4o-mini-synthetic,1.62,1.62
+2911298,Hamburg,DE,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+2911298,Hamburg,DE,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+2911298,Hamburg,DE,pop_en,en,gpt-4o-mini-synthetic,1.97,1.97
+625144,Minsk,BY,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+625144,Minsk,BY,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+625144,Minsk,BY,pop_en,en,gpt-4o-mini-synthetic,1.27,1.27
+3054643,Budapest,HU,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+3054643,Budapest,HU,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+3054643,Budapest,HU,pop_en,en,gpt-4o-mini-synthetic,2.5,2.5
+756135,Warsaw,PL,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+756135,Warsaw,PL,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+756135,Warsaw,PL,pop_en,en,gpt-4o-mini-synthetic,0.94,0.94
+2761369,Vienna,AT,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+2761369,Vienna,AT,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+2761369,Vienna,AT,pop_en,en,gpt-4o-mini-synthetic,1.73,1.73
+3128760,Barcelona,ES,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+3128760,Barcelona,ES,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+3128760,Barcelona,ES,pop_en,en,gpt-4o-mini-synthetic,2.4,2.4
+1496747,Novosibirsk,RU,qol_en,en,gpt-4o-mini-synthetic,9.1,9.1
+1496747,Novosibirsk,RU,qol_zh,zh,gpt-4o-mini-synthetic,9.0,9.0
+1496747,Novosibirsk,RU,pop_en,en,gpt-4o-mini-synthetic,1.4,1.4
+2673730,Stockholm,SE,qol_en,en,gpt-4o-mini-synthetic,9.0,9.0
+2673730,Stockholm,SE,qol_zh,zh,gpt-4o-mini-synthetic,9.5,9.5
+2673730,Stockholm,SE,pop_en,en,gpt-4o-mini-synthetic,1.28,1.28
+1486209,Yekaterinburg,RU,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+1486209,Yekaterinburg,RU,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+1486209,Yekaterinburg,RU,pop_en,en,gpt-4o-mini-synthetic,0.89,0.89
+706483,Kharkiv,UA,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+706483,Kharkiv,UA,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+706483,Kharkiv,UA,pop_en,en,gpt-4o-mini-synthetic,1.1,1.1
+3173435,Milan,IT,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+3173435,Milan,IT,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+3173435,Milan,IT,pop_en,en,gpt-4o-mini-synthetic,2.01,2.01
+792680,Belgrade,RS,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+792680,Belgrade,RS,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+792680,Belgrade,RS,pop_en,en,gpt-4o-mini-synthetic,1.19,1.19
+2867714,Munich,DE,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+2867714,Munich,DE,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+2867714,Munich,DE,pop_en,en,gpt-4o-mini-synthetic,0.84,0.84
+520555,Nizhniy Novgorod,RU,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+520555,Nizhniy Novgorod,RU,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+520555,Nizhniy Novgorod,RU,pop_en,en,gpt-4o-mini-synthetic,1.45,1.45
+551487,Kazan,RU,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+551487,Kazan,RU,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+551487,Kazan,RU,pop_en,en,gpt-4o-mini-synthetic,1.01,1.01
+1508291,Chelyabinsk,RU,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1508291,Chelyabinsk,RU,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+1508291,Chelyabinsk,RU,pop_en,en,gpt-4o-mini-synthetic,1.0,1.0
+1496153,Omsk,RU,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+1496153,Omsk,RU,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1496153,Omsk,RU,pop_en,en,gpt-4o-mini-synthetic,1.67,1.67
+3067696,Prague,CZ,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+3067696,Prague,CZ,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+3067696,Prague,CZ,pop_en,en,gpt-4o-mini-synthetic,1.33,1.33
+499099,Samara,RU,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+499099,Samara,RU,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+499099,Samara,RU,pop_en,en,gpt-4o-mini-synthetic,1.23,1.23
+2655603,Birmingham,GB,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+2655603,Birmingham,GB,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+2655603,Birmingham,GB,pop_en,en,gpt-4o-mini-synthetic,1.78,1.78
+2618425,Copenhagen,DK,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+2618425,Copenhagen,DK,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+2618425,Copenhagen,DK,pop_en,en,gpt-4o-mini-synthetic,1.25,1.25
+727011,Sofia,BG,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+727011,Sofia,BG,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+727011,Sofia,BG,pop_en,en,gpt-4o-mini-synthetic,1.85,1.85
+501175,Rostov-na-Donu,RU,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+501175,Rostov-na-Donu,RU,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+501175,Rostov-na-Donu,RU,pop_en,en,gpt-4o-mini-synthetic,0.66,0.66
+479561,Ufa,RU,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+479561,Ufa,RU,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+479561,Ufa,RU,pop_en,en,gpt-4o-mini-synthetic,1.72,1.72
+1502026,Krasnoyarsk,RU,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1502026,Krasnoyarsk,RU,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+1502026,Krasnoyarsk,RU,pop_en,en,gpt-4o-mini-synthetic,1.09,1.09
+3143244,Oslo,NO,qol_en,en,gpt-4o-mini-synthetic,9.0,9.0
+3143244,Oslo,NO,qol_zh,zh,gpt-4o-mini-synthetic,9.7,9.7
+3143244,Oslo,NO,pop_en,en,gpt-4o-mini-synthetic,0.91,0.91
+472045,Voronezh,RU,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+472045,Voronezh,RU,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+472045,Voronezh,RU,pop_en,en,gpt-4o-mini-synthetic,1.26,1.26
+2800866,Brussels,BE,qol_en,en,gpt-4o-mini-synthetic,9.3,9.3
+2800866,Brussels,BE,qol_zh,zh,gpt-4o-mini-synthetic,9.5,9.5
+2800866,Brussels,BE,pop_en,en,gpt-4o-mini-synthetic,0.91,0.91
+698740,Odesa,UA,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+698740,Odesa,UA,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+698740,Odesa,UA,pop_en,en,gpt-4o-mini-synthetic,1.27,1.27
+472757,Volgograd,RU,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+472757,Volgograd,RU,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+472757,Volgograd,RU,pop_en,en,gpt-4o-mini-synthetic,1.37,1.37
+511196,Perm,RU,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+511196,Perm,RU,qol_zh,zh,gpt-4o-mini-synthetic,8.6,8.6
+511196,Perm,RU,pop_en,en,gpt-4o-mini-synthetic,0.93,0.93
+709930,Dnipro,UA,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+709930,Dnipro,UA,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+709930,Dnipro,UA,pop_en,en,gpt-4o-mini-synthetic,0.73,0.73
+2886242,Köln,DE,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+2886242,Köln,DE,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+2886242,Köln,DE,pop_en,en,gpt-4o-mini-synthetic,0.97,0.97
+3172394,Naples,IT,qol_en,en,gpt-4o-mini-synthetic,8.7,8.7
+3172394,Naples,IT,qol_zh,zh,gpt-4o-mini-synthetic,8.8,8.8
+3172394,Naples,IT,pop_en,en,gpt-4o-mini-synthetic,0.92,0.92
+709717,Donetsk,UA,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+709717,Donetsk,UA,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+709717,Donetsk,UA,pop_en,en,gpt-4o-mini-synthetic,1.08,1.08
+542420,Krasnodar,RU,qol_en,en,gpt-4o-mini-synthetic,9.0,9.0
+542420,Krasnodar,RU,qol_zh,zh,gpt-4o-mini-synthetic,8.9,8.9
+542420,Krasnodar,RU,pop_en,en,gpt-4o-mini-synthetic,0.96,0.96
+2995469,Marseille,FR,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+2995469,Marseille,FR,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+2995469,Marseille,FR,pop_en,en,gpt-4o-mini-synthetic,0.85,0.85
+2747891,Rotterdam,NL,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+2747891,Rotterdam,NL,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+2747891,Rotterdam,NL,pop_en,en,gpt-4o-mini-synthetic,0.92,0.92
+3165524,Turin,IT,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+3165524,Turin,IT,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+3165524,Turin,IT,pop_en,en,gpt-4o-mini-synthetic,1.12,1.12
+498677,Saratov,RU,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+498677,Saratov,RU,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+498677,Saratov,RU,pop_en,en,gpt-4o-mini-synthetic,0.67,0.67
+2509954,Valencia,ES,qol_en,en,gpt-4o-mini-synthetic,8.6,8.6
+2509954,Valencia,ES,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+2509954,Valencia,ES,pop_en,en,gpt-4o-mini-synthetic,0.69,0.69
+3094802,Kraków,PL,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+3094802,Kraków,PL,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+3094802,Kraków,PL,pop_en,en,gpt-4o-mini-synthetic,0.79,0.79
+1488754,Tyumen,RU,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+1488754,Tyumen,RU,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+1488754,Tyumen,RU,pop_en,en,gpt-4o-mini-synthetic,0.43,0.43
+456172,Riga,LV,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+456172,Riga,LV,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+456172,Riga,LV,pop_en,en,gpt-4o-mini-synthetic,0.63,0.63
+2759794,Amsterdam,NL,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+2759794,Amsterdam,NL,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+2759794,Amsterdam,NL,pop_en,en,gpt-4o-mini-synthetic,0.8,0.8
+702550,Lviv,UA,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+702550,Lviv,UA,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+702550,Lviv,UA,pop_en,en,gpt-4o-mini-synthetic,0.91,0.91
+687700,Zaporizhzhya,UA,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+687700,Zaporizhzhya,UA,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+687700,Zaporizhzhya,UA,pop_en,en,gpt-4o-mini-synthetic,1.1,1.1
+482283,Tolyatti,RU,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+482283,Tolyatti,RU,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+482283,Tolyatti,RU,pop_en,en,gpt-4o-mini-synthetic,0.56,0.56
+3191281,Sarajevo,BA,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+3191281,Sarajevo,BA,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+3191281,Sarajevo,BA,pop_en,en,gpt-4o-mini-synthetic,0.65,0.65
+3104324,Zaragoza,ES,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+3104324,Zaragoza,ES,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+3104324,Zaragoza,ES,pop_en,en,gpt-4o-mini-synthetic,0.98,0.98
+2510911,Sevilla,ES,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+2510911,Sevilla,ES,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+2510911,Sevilla,ES,pop_en,en,gpt-4o-mini-synthetic,0.76,0.76
+3081368,Wrocław,PL,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+3081368,Wrocław,PL,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+3081368,Wrocław,PL,pop_en,en,gpt-4o-mini-synthetic,0.76,0.76
+264371,Athens,GR,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+264371,Athens,GR,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+264371,Athens,GR,pop_en,en,gpt-4o-mini-synthetic,0.7,0.7
+3186886,Zagreb,HR,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+3186886,Zagreb,HR,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+3186886,Zagreb,HR,pop_en,en,gpt-4o-mini-synthetic,0.95,0.95
+658225,Helsinki,FI,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+658225,Helsinki,FI,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+658225,Helsinki,FI,pop_en,en,gpt-4o-mini-synthetic,0.65,0.65
+2925533,Frankfurt am Main,DE,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+2925533,Frankfurt am Main,DE,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+2925533,Frankfurt am Main,DE,pop_en,en,gpt-4o-mini-synthetic,0.52,0.52
+2523920,Palermo,IT,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+2523920,Palermo,IT,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+2523920,Palermo,IT,pop_en,en,gpt-4o-mini-synthetic,0.56,0.56
+2314302,Kinshasa,CD,qol_en,en,gpt-4o-mini-synthetic,5.0,5.0
+2314302,Kinshasa,CD,qol_zh,zh,gpt-4o-mini-synthetic,4.9,4.9
+2314302,Kinshasa,CD,pop_en,en,gpt-4o-mini-synthetic,4.37,4.37
+2332459,Lagos,NG,qol_en,en,gpt-4o-mini-synthetic,4.8,4.8
+2332459,Lagos,NG,qol_zh,zh,gpt-4o-mini-synthetic,5.1,5.1
+2332459,Lagos,NG,pop_en,en,gpt-4o-mini-synthetic,19.02,19.02
+360630,Cairo,EG,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+360630,Cairo,EG,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+360630,Cairo,EG,pop_en,en,gpt-4o-mini-synthetic,9.47,9.47
+993800,Johannesburg,ZA,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+993800,Johannesburg,ZA,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+993800,Johannesburg,ZA,pop_en,en,gpt-4o-mini-synthetic,13.67,13.67
+2293538,Abidjan,CI,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+2293538,Abidjan,CI,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+2293538,Abidjan,CI,pop_en,en,gpt-4o-mini-synthetic,6.37,6.37
+160263,Dar es Salaam,TZ,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+160263,Dar es Salaam,TZ,qol_zh,zh,gpt-4o-mini-synthetic,5.7,5.7
+160263,Dar es Salaam,TZ,pop_en,en,gpt-4o-mini-synthetic,4.98,4.98
+361058,Alexandria,EG,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+361058,Alexandria,EG,qol_zh,zh,gpt-4o-mini-synthetic,5.7,5.7
+361058,Alexandria,EG,pop_en,en,gpt-4o-mini-synthetic,4.82,4.82
+2335204,Kano,NG,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+2335204,Kano,NG,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+2335204,Kano,NG,pop_en,en,gpt-4o-mini-synthetic,4.07,4.07
+3369157,Cape Town,ZA,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+3369157,Cape Town,ZA,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+3369157,Cape Town,ZA,pop_en,en,gpt-4o-mini-synthetic,6.1,6.1
+184745,Nairobi,KE,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+184745,Nairobi,KE,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+184745,Nairobi,KE,pop_en,en,gpt-4o-mini-synthetic,5.32,5.32
+360995,Giza,EG,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+360995,Giza,EG,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+360995,Giza,EG,pop_en,en,gpt-4o-mini-synthetic,5.2,5.2
+2460596,Bamako,ML,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+2460596,Bamako,ML,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+2460596,Bamako,ML,pop_en,en,gpt-4o-mini-synthetic,5.9,5.9
+344979,Addis Ababa,ET,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+344979,Addis Ababa,ET,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+344979,Addis Ababa,ET,pop_en,en,gpt-4o-mini-synthetic,3.06,3.06
+2553604,Casablanca,MA,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+2553604,Casablanca,MA,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+2553604,Casablanca,MA,pop_en,en,gpt-4o-mini-synthetic,2.95,2.95
+2339354,Ibadan,NG,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+2339354,Ibadan,NG,qol_zh,zh,gpt-4o-mini-synthetic,5.6,5.6
+2339354,Ibadan,NG,pop_en,en,gpt-4o-mini-synthetic,4.11,4.11
+1007311,Durban,ZA,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+1007311,Durban,ZA,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1007311,Durban,ZA,pop_en,en,gpt-4o-mini-synthetic,3.31,3.31
+2240449,Luanda,AO,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+2240449,Luanda,AO,qol_zh,zh,gpt-4o-mini-synthetic,8.7,8.7
+2240449,Luanda,AO,pop_en,en,gpt-4o-mini-synthetic,3.14,3.14
+2352778,Abuja,NG,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+2352778,Abuja,NG,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+2352778,Abuja,NG,pop_en,en,gpt-4o-mini-synthetic,3.19,3.19
+2253354,Dakar,SN,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+2253354,Dakar,SN,qol_zh,zh,gpt-4o-mini-synthetic,5.4,5.4
+2253354,Dakar,SN,pop_en,en,gpt-4o-mini-synthetic,1.32,1.32
+53654,Mogadishu,SO,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+53654,Mogadishu,SO,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+53654,Mogadishu,SO,pop_en,en,gpt-4o-mini-synthetic,2.21,2.21
+2298890,Kumasi,GH,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+2298890,Kumasi,GH,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+2298890,Kumasi,GH,pop_en,en,gpt-4o-mini-synthetic,1.43,1.43
+2507480,Algiers,DZ,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+2507480,Algiers,DZ,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+2507480,Algiers,DZ,pop_en,en,gpt-4o-mini-synthetic,3.56,3.56
+922704,Lubumbashi,CD,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+922704,Lubumbashi,CD,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+922704,Lubumbashi,CD,pop_en,en,gpt-4o-mini-synthetic,2.2,2.2
+909137,Lusaka,ZM,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+909137,Lusaka,ZM,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+909137,Lusaka,ZM,pop_en,en,gpt-4o-mini-synthetic,2.65,2.65
+2324774,Port Harcourt,NG,qol_en,en,gpt-4o-mini-synthetic,4.8,4.8
+2324774,Port Harcourt,NG,qol_zh,zh,gpt-4o-mini-synthetic,5.3,5.3
+2324774,Port Harcourt,NG,pop_en,en,gpt-4o-mini-synthetic,3.0,3.0
+964137,Pretoria,ZA,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+964137,Pretoria,ZA,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+964137,Pretoria,ZA,pop_en,en,gpt-4o-mini-synthetic,2.43,2.43
+209228,Mbuji-Mayi,CD,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+209228,Mbuji-Mayi,CD,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+209228,Mbuji-Mayi,CD,pop_en,en,gpt-4o-mini-synthetic,1.68,1.68
+379252,Khartoum,SD,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+379252,Khartoum,SD,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+379252,Khartoum,SD,pop_en,en,gpt-4o-mini-synthetic,2.3,2.3
+2306104,Accra,GH,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+2306104,Accra,GH,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+2306104,Accra,GH,pop_en,en,gpt-4o-mini-synthetic,0.29,0.29
+195272,Kakamega,KE,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+195272,Kakamega,KE,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+195272,Kakamega,KE,pop_en,en,gpt-4o-mini-synthetic,1.66,1.66
+2335727,Kaduna,NG,qol_en,en,gpt-4o-mini-synthetic,5.2,5.2
+2335727,Kaduna,NG,qol_zh,zh,gpt-4o-mini-synthetic,4.8,4.8
+2335727,Kaduna,NG,pop_en,en,gpt-4o-mini-synthetic,2.49,2.49
+365137,Omdurman,SD,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+365137,Omdurman,SD,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+365137,Omdurman,SD,pop_en,en,gpt-4o-mini-synthetic,1.82,1.82
+2347283,Benin City,NG,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+2347283,Benin City,NG,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+2347283,Benin City,NG,pop_en,en,gpt-4o-mini-synthetic,1.1,1.1
+953781,Soweto,ZA,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+953781,Soweto,ZA,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+953781,Soweto,ZA,pop_en,en,gpt-4o-mini-synthetic,0.9,0.9
+232422,Kampala,UG,qol_en,en,gpt-4o-mini-synthetic,5.8,5.8
+232422,Kampala,UG,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+232422,Kampala,UG,pop_en,en,gpt-4o-mini-synthetic,2.11,2.11
+2538475,Rabat,MA,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+2538475,Rabat,MA,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+2538475,Rabat,MA,pop_en,en,gpt-4o-mini-synthetic,1.5,1.5
+2326016,Onitsha,NG,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+2326016,Onitsha,NG,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+2326016,Onitsha,NG,pop_en,en,gpt-4o-mini-synthetic,1.75,1.75
+890299,Harare,ZW,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+890299,Harare,ZW,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+890299,Harare,ZW,pop_en,en,gpt-4o-mini-synthetic,1.42,1.42
+2427123,N'Djamena,TD,qol_en,en,gpt-4o-mini-synthetic,5.9,5.9
+2427123,N'Djamena,TD,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+2427123,N'Djamena,TD,pop_en,en,gpt-4o-mini-synthetic,1.34,1.34
+1070940,Antananarivo,MG,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+1070940,Antananarivo,MG,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+1070940,Antananarivo,MG,pop_en,en,gpt-4o-mini-synthetic,1.65,1.65
+2293521,Abobo,CI,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+2293521,Abobo,CI,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+2293521,Abobo,CI,pop_en,en,gpt-4o-mini-synthetic,0.54,0.54
+2232593,Douala,CM,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+2232593,Douala,CM,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+2232593,Douala,CM,pop_en,en,gpt-4o-mini-synthetic,1.74,1.74
+2440485,Niamey,NE,qol_en,en,gpt-4o-mini-synthetic,3.6,3.6
+2440485,Niamey,NE,qol_zh,zh,gpt-4o-mini-synthetic,4.2,4.2
+2440485,Niamey,NE,pop_en,en,gpt-4o-mini-synthetic,1.27,1.27
+2210247,Tripoli,LY,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+2210247,Tripoli,LY,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+2210247,Tripoli,LY,pop_en,en,gpt-4o-mini-synthetic,1.54,1.54
+2220957,Yaoundé,CM,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+2220957,Yaoundé,CM,qol_zh,zh,gpt-4o-mini-synthetic,5.3,5.3
+2220957,Yaoundé,CM,pop_en,en,gpt-4o-mini-synthetic,2.05,2.05
+1040652,Maputo,MZ,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+1040652,Maputo,MZ,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+1040652,Maputo,MZ,pop_en,en,gpt-4o-mini-synthetic,1.58,1.58
+214481,Kananga,CD,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+214481,Kananga,CD,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+214481,Kananga,CD,pop_en,en,gpt-4o-mini-synthetic,1.38,1.38
+349076,Shubrā al Khaymah,EG,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+349076,Shubrā al Khaymah,EG,qol_zh,zh,gpt-4o-mini-synthetic,8.5,8.5
+349076,Shubrā al Khaymah,EG,pop_en,en,gpt-4o-mini-synthetic,1.32,1.32
+186301,Mombasa,KE,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+186301,Mombasa,KE,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+186301,Mombasa,KE,pop_en,en,gpt-4o-mini-synthetic,1.64,1.64
+1039854,Matola,MZ,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+1039854,Matola,MZ,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+1039854,Matola,MZ,pop_en,en,gpt-4o-mini-synthetic,1.79,1.79
+2548885,Fes,MA,qol_en,en,gpt-4o-mini-synthetic,5.8,5.8
+2548885,Fes,MA,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+2548885,Fes,MA,pop_en,en,gpt-4o-mini-synthetic,0.92,0.92
+212730,Kisangani,CD,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+212730,Kisangani,CD,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+212730,Kisangani,CD,pop_en,en,gpt-4o-mini-synthetic,1.3,1.3
+2353151,Aba,NG,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+2353151,Aba,NG,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+2353151,Aba,NG,pop_en,en,gpt-4o-mini-synthetic,1.32,1.32
+202061,Kigali,RW,qol_en,en,gpt-4o-mini-synthetic,5.9,5.9
+202061,Kigali,RW,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+202061,Kigali,RW,pop_en,en,gpt-4o-mini-synthetic,1.54,1.54
+2244322,Touba,SN,qol_en,en,gpt-4o-mini-synthetic,5.3,5.3
+2244322,Touba,SN,qol_zh,zh,gpt-4o-mini-synthetic,5.5,5.5
+2244322,Touba,SN,pop_en,en,gpt-4o-mini-synthetic,1.36,1.36
+927967,Lilongwe,MW,qol_en,en,gpt-4o-mini-synthetic,5.5,5.5
+927967,Lilongwe,MW,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+927967,Lilongwe,MW,pop_en,en,gpt-4o-mini-synthetic,1.07,1.07
+2331447,Maiduguri,NG,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+2331447,Maiduguri,NG,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+2331447,Maiduguri,NG,pop_en,en,gpt-4o-mini-synthetic,1.12,1.12
+152224,Mwanza,TZ,qol_en,en,gpt-4o-mini-synthetic,5.3,5.3
+152224,Mwanza,TZ,qol_zh,zh,gpt-4o-mini-synthetic,4.8,4.8
+152224,Mwanza,TZ,pop_en,en,gpt-4o-mini-synthetic,1.63,1.63
+2337639,Ilorin,NG,qol_en,en,gpt-4o-mini-synthetic,5.4,5.4
+2337639,Ilorin,NG,qol_zh,zh,gpt-4o-mini-synthetic,5.1,5.1
+2337639,Ilorin,NG,pop_en,en,gpt-4o-mini-synthetic,0.38,0.38
+964420,Gqeberha,ZA,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+964420,Gqeberha,ZA,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+964420,Gqeberha,ZA,pop_en,en,gpt-4o-mini-synthetic,1.57,1.57
+2322911,Sokoto,NG,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+2322911,Sokoto,NG,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+2322911,Sokoto,NG,pop_en,en,gpt-4o-mini-synthetic,1.74,1.74
+2335953,Jos,NG,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+2335953,Jos,NG,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+2335953,Jos,NG,pop_en,en,gpt-4o-mini-synthetic,0.26,0.26
+2530335,Tangier,MA,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+2530335,Tangier,MA,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+2530335,Tangier,MA,pop_en,en,gpt-4o-mini-synthetic,0.52,0.52
+3530597,Mexico City,MX,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+3530597,Mexico City,MX,qol_zh,zh,gpt-4o-mini-synthetic,8.8,8.8
+3530597,Mexico City,MX,pop_en,en,gpt-4o-mini-synthetic,17.4,17.4
+5128581,New York City,US,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+5128581,New York City,US,qol_zh,zh,gpt-4o-mini-synthetic,8.7,8.7
+5128581,New York City,US,pop_en,en,gpt-4o-mini-synthetic,11.06,11.06
+5368361,Los Angeles,US,qol_en,en,gpt-4o-mini-synthetic,8.6,8.6
+5368361,Los Angeles,US,qol_zh,zh,gpt-4o-mini-synthetic,8.7,8.7
+5368361,Los Angeles,US,pop_en,en,gpt-4o-mini-synthetic,3.94,3.94
+6167865,Toronto,CA,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+6167865,Toronto,CA,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+6167865,Toronto,CA,pop_en,en,gpt-4o-mini-synthetic,2.56,2.56
+5110302,Brooklyn,US,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+5110302,Brooklyn,US,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+5110302,Brooklyn,US,pop_en,en,gpt-4o-mini-synthetic,1.92,1.92
+4887398,Chicago,US,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+4887398,Chicago,US,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+4887398,Chicago,US,pop_en,en,gpt-4o-mini-synthetic,3.78,3.78
+5133273,Queens,US,qol_en,en,gpt-4o-mini-synthetic,8.8,8.8
+5133273,Queens,US,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+5133273,Queens,US,pop_en,en,gpt-4o-mini-synthetic,1.63,1.63
+4699066,Houston,US,qol_en,en,gpt-4o-mini-synthetic,8.8,8.8
+4699066,Houston,US,qol_zh,zh,gpt-4o-mini-synthetic,8.5,8.5
+4699066,Houston,US,pop_en,en,gpt-4o-mini-synthetic,2.16,2.16
+3492908,Santo Domingo,DO,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+3492908,Santo Domingo,DO,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+3492908,Santo Domingo,DO,pop_en,en,gpt-4o-mini-synthetic,2.27,2.27
+3553478,Havana,CU,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+3553478,Havana,CU,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+3553478,Havana,CU,pop_en,en,gpt-4o-mini-synthetic,2.37,2.37
+3981609,Tijuana,MX,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+3981609,Tijuana,MX,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+3981609,Tijuana,MX,pop_en,en,gpt-4o-mini-synthetic,1.91,1.91
+3526683,Iztapalapa,MX,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+3526683,Iztapalapa,MX,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+3526683,Iztapalapa,MX,pop_en,en,gpt-4o-mini-synthetic,2.59,2.59
+6077243,Montréal,CA,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+6077243,Montréal,CA,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+6077243,Montréal,CA,pop_en,en,gpt-4o-mini-synthetic,1.83,1.83
+3521081,Puebla,MX,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+3521081,Puebla,MX,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+3521081,Puebla,MX,pop_en,en,gpt-4o-mini-synthetic,1.71,1.71
+5308655,Phoenix,US,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+5308655,Phoenix,US,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+5308655,Phoenix,US,pop_en,en,gpt-4o-mini-synthetic,0.96,0.96
+3529612,Ecatepec de Morelos,MX,qol_en,en,gpt-4o-mini-synthetic,8.6,8.6
+3529612,Ecatepec de Morelos,MX,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+3529612,Ecatepec de Morelos,MX,pop_en,en,gpt-4o-mini-synthetic,1.3,1.3
+3991164,Santiago de Querétaro,MX,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+3991164,Santiago de Querétaro,MX,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+3991164,Santiago de Querétaro,MX,pop_en,en,gpt-4o-mini-synthetic,1.45,1.45
+3998655,León de los Aldama,MX,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+3998655,León de los Aldama,MX,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+3998655,León de los Aldama,MX,pop_en,en,gpt-4o-mini-synthetic,1.71,1.71
+4560349,Philadelphia,US,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+4560349,Philadelphia,US,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+4560349,Philadelphia,US,pop_en,en,gpt-4o-mini-synthetic,1.01,1.01
+4726206,San Antonio,US,qol_en,en,gpt-4o-mini-synthetic,8.3,8.3
+4726206,San Antonio,US,qol_zh,zh,gpt-4o-mini-synthetic,8.5,8.5
+4726206,San Antonio,US,pop_en,en,gpt-4o-mini-synthetic,1.72,1.72
+4013708,Ciudad Juárez,MX,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+4013708,Ciudad Juárez,MX,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+4013708,Ciudad Juárez,MX,pop_en,en,gpt-4o-mini-synthetic,1.53,1.53
+5125771,Manhattan,US,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+5125771,Manhattan,US,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+5125771,Manhattan,US,pop_en,en,gpt-4o-mini-synthetic,2.47,2.47
+3979770,Zapopan,MX,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+3979770,Zapopan,MX,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+3979770,Zapopan,MX,pop_en,en,gpt-4o-mini-synthetic,1.44,1.44
+5391811,San Diego,US,qol_en,en,gpt-4o-mini-synthetic,10.0,10.0
+5391811,San Diego,US,qol_zh,zh,gpt-4o-mini-synthetic,9.8,9.8
+5391811,San Diego,US,pop_en,en,gpt-4o-mini-synthetic,2.1,2.1
+4005539,Guadalajara,MX,qol_en,en,gpt-4o-mini-synthetic,8.6,8.6
+4005539,Guadalajara,MX,qol_zh,zh,gpt-4o-mini-synthetic,8.4,8.4
+4005539,Guadalajara,MX,pop_en,en,gpt-4o-mini-synthetic,1.62,1.62
+5110266,The Bronx,US,qol_en,en,gpt-4o-mini-synthetic,9.3,9.3
+5110266,The Bronx,US,qol_zh,zh,gpt-4o-mini-synthetic,9.2,9.2
+5110266,The Bronx,US,pop_en,en,gpt-4o-mini-synthetic,1.3,1.3
+4684888,Dallas,US,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+4684888,Dallas,US,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+4684888,Dallas,US,pop_en,en,gpt-4o-mini-synthetic,1.07,1.07
+5913490,Calgary,CA,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+5913490,Calgary,CA,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+5913490,Calgary,CA,pop_en,en,gpt-4o-mini-synthetic,1.0,1.0
+3718426,Port-au-Prince,HT,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+3718426,Port-au-Prince,HT,qol_zh,zh,gpt-4o-mini-synthetic,6.1,6.1
+3718426,Port-au-Prince,HT,pop_en,en,gpt-4o-mini-synthetic,1.36,1.36
+3523349,Mérida,MX,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+3523349,Mérida,MX,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+3523349,Mérida,MX,pop_en,en,gpt-4o-mini-synthetic,1.34,1.34
+3492914,Santiago de los Caballeros,DO,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+3492914,Santiago de los Caballeros,DO,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+3492914,Santiago de los Caballeros,DO,pop_en,en,gpt-4o-mini-synthetic,1.8,1.8
+3514674,Gustavo Adolfo Madero,MX,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+3514674,Gustavo Adolfo Madero,MX,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+3514674,Gustavo Adolfo Madero,MX,pop_en,en,gpt-4o-mini-synthetic,1.17,1.17
+3995465,Monterrey,MX,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+3995465,Monterrey,MX,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+3995465,Monterrey,MX,pop_en,en,gpt-4o-mini-synthetic,1.32,1.32
+3530589,Ciudad Nezahualcoyotl,MX,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+3530589,Ciudad Nezahualcoyotl,MX,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+3530589,Ciudad Nezahualcoyotl,MX,pop_en,en,gpt-4o-mini-synthetic,0.62,0.62
+3996069,Mexicali,MX,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+3996069,Mexicali,MX,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+3996069,Mexicali,MX,pop_en,en,gpt-4o-mini-synthetic,0.8,0.8
+6094817,Ottawa,CA,qol_en,en,gpt-4o-mini-synthetic,8.8,8.8
+6094817,Ottawa,CA,qol_zh,zh,gpt-4o-mini-synthetic,9.1,9.1
+6094817,Ottawa,CA,pop_en,en,gpt-4o-mini-synthetic,1.2,1.2
+5946768,Edmonton,CA,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+5946768,Edmonton,CA,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+5946768,Edmonton,CA,pop_en,en,gpt-4o-mini-synthetic,1.38,1.38
+4160021,Jacksonville,US,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+4160021,Jacksonville,US,qol_zh,zh,gpt-4o-mini-synthetic,8.8,8.8
+4160021,Jacksonville,US,pop_en,en,gpt-4o-mini-synthetic,1.13,1.13
+4691930,Fort Worth,US,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+4691930,Fort Worth,US,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+4691930,Fort Worth,US,pop_en,en,gpt-4o-mini-synthetic,1.05,1.05
+5392171,San Jose,US,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+5392171,San Jose,US,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+5392171,San Jose,US,pop_en,en,gpt-4o-mini-synthetic,1.28,1.28
+3598132,Guatemala City,GT,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+3598132,Guatemala City,GT,qol_zh,zh,gpt-4o-mini-synthetic,5.8,5.8
+3598132,Guatemala City,GT,pop_en,en,gpt-4o-mini-synthetic,0.45,0.45
+4671654,Austin,US,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+4671654,Austin,US,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+4671654,Austin,US,pop_en,en,gpt-4o-mini-synthetic,0.35,0.35
+3617763,Managua,NI,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+3617763,Managua,NI,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+3617763,Managua,NI,pop_en,en,gpt-4o-mini-synthetic,0.97,0.97
+3489854,Kingston,JM,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+3489854,Kingston,JM,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+3489854,Kingston,JM,pop_en,en,gpt-4o-mini-synthetic,0.91,0.91
+4014338,Chihuahua,MX,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+4014338,Chihuahua,MX,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+4014338,Chihuahua,MX,pop_en,en,gpt-4o-mini-synthetic,1.0,1.0
+4509177,Columbus,US,qol_en,en,gpt-4o-mini-synthetic,8.3,8.3
+4509177,Columbus,US,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+4509177,Columbus,US,pop_en,en,gpt-4o-mini-synthetic,1.18,1.18
+4460243,Charlotte,US,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+4460243,Charlotte,US,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+4460243,Charlotte,US,pop_en,en,gpt-4o-mini-synthetic,1.06,1.06
+3531673,Cancún,MX,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+3531673,Cancún,MX,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+3531673,Cancún,MX,pop_en,en,gpt-4o-mini-synthetic,0.89,0.89
+4259418,Indianapolis,US,qol_en,en,gpt-4o-mini-synthetic,8.9,8.9
+4259418,Indianapolis,US,qol_zh,zh,gpt-4o-mini-synthetic,9.0,9.0
+4259418,Indianapolis,US,pop_en,en,gpt-4o-mini-synthetic,0.88,0.88
+3600949,Tegucigalpa,HN,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+3600949,Tegucigalpa,HN,qol_zh,zh,gpt-4o-mini-synthetic,7.7,7.7
+3600949,Tegucigalpa,HN,pop_en,en,gpt-4o-mini-synthetic,0.99,0.99
+3522790,Naucalpan de Juárez,MX,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+3522790,Naucalpan de Juárez,MX,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+3522790,Naucalpan de Juárez,MX,pop_en,en,gpt-4o-mini-synthetic,0.57,0.57
+3448439,São Paulo,BR,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+3448439,São Paulo,BR,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+3448439,São Paulo,BR,pop_en,en,gpt-4o-mini-synthetic,11.7,11.7
+3936456,Lima,PE,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+3936456,Lima,PE,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+3936456,Lima,PE,pop_en,en,gpt-4o-mini-synthetic,7.57,7.57
+3688689,Bogotá,CO,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+3688689,Bogotá,CO,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+3688689,Bogotá,CO,pop_en,en,gpt-4o-mini-synthetic,3.13,3.13
+3451190,Rio de Janeiro,BR,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+3451190,Rio de Janeiro,BR,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+3451190,Rio de Janeiro,BR,pop_en,en,gpt-4o-mini-synthetic,4.3,4.3
+3871336,Santiago,CL,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+3871336,Santiago,CL,qol_zh,zh,gpt-4o-mini-synthetic,8.2,8.2
+3871336,Santiago,CL,pop_en,en,gpt-4o-mini-synthetic,6.61,6.61
+3646738,Caracas,VE,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+3646738,Caracas,VE,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+3646738,Caracas,VE,pop_en,en,gpt-4o-mini-synthetic,3.13,3.13
+3435910,Buenos Aires,AR,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+3435910,Buenos Aires,AR,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+3435910,Buenos Aires,AR,pop_en,en,gpt-4o-mini-synthetic,2.63,2.63
+3652462,Quito,EC,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+3652462,Quito,EC,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+3652462,Quito,EC,pop_en,en,gpt-4o-mini-synthetic,2.92,2.92
+3657509,Guayaquil,EC,qol_en,en,gpt-4o-mini-synthetic,6.9,6.9
+3657509,Guayaquil,EC,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+3657509,Guayaquil,EC,pop_en,en,gpt-4o-mini-synthetic,3.7,3.7
+3470127,Belo Horizonte,BR,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+3470127,Belo Horizonte,BR,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+3470127,Belo Horizonte,BR,pop_en,en,gpt-4o-mini-synthetic,0.64,0.64
+3450554,Salvador,BR,qol_en,en,gpt-4o-mini-synthetic,7.8,7.8
+3450554,Salvador,BR,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+3450554,Salvador,BR,pop_en,en,gpt-4o-mini-synthetic,2.53,2.53
+3399415,Fortaleza,BR,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+3399415,Fortaleza,BR,qol_zh,zh,gpt-4o-mini-synthetic,5.6,5.6
+3399415,Fortaleza,BR,pop_en,en,gpt-4o-mini-synthetic,2.79,2.79
+3687925,Cali,CO,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+3687925,Cali,CO,qol_zh,zh,gpt-4o-mini-synthetic,7.4,7.4
+3687925,Cali,CO,pop_en,en,gpt-4o-mini-synthetic,0.53,0.53
+3663517,Manaus,BR,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+3663517,Manaus,BR,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+3663517,Manaus,BR,pop_en,en,gpt-4o-mini-synthetic,1.23,1.23
+3469058,Brasília,BR,qol_en,en,gpt-4o-mini-synthetic,7.2,7.2
+3469058,Brasília,BR,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+3469058,Brasília,BR,pop_en,en,gpt-4o-mini-synthetic,2.59,2.59
+3860259,Córdoba,AR,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+3860259,Córdoba,AR,qol_zh,zh,gpt-4o-mini-synthetic,7.0,7.0
+3860259,Córdoba,AR,pop_en,en,gpt-4o-mini-synthetic,2.86,2.86
+3911925,La Paz,BO,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+3911925,La Paz,BO,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+3911925,La Paz,BO,pop_en,en,gpt-4o-mini-synthetic,1.44,1.44
+3674962,Medellín,CO,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+3674962,Medellín,CO,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+3674962,Medellín,CO,pop_en,en,gpt-4o-mini-synthetic,1.9,1.9
+3464975,Curitiba,BR,qol_en,en,gpt-4o-mini-synthetic,8.5,8.5
+3464975,Curitiba,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+3464975,Curitiba,BR,pop_en,en,gpt-4o-mini-synthetic,1.01,1.01
+3904906,Santa Cruz de la Sierra,BO,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+3904906,Santa Cruz de la Sierra,BO,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+3904906,Santa Cruz de la Sierra,BO,pop_en,en,gpt-4o-mini-synthetic,1.46,1.46
+3633009,Maracaibo,VE,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+3633009,Maracaibo,VE,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+3633009,Maracaibo,VE,pop_en,en,gpt-4o-mini-synthetic,2.71,2.71
+3390760,Recife,BR,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+3390760,Recife,BR,qol_zh,zh,gpt-4o-mini-synthetic,7.5,7.5
+3390760,Recife,BR,pop_en,en,gpt-4o-mini-synthetic,2.72,2.72
+3625549,Valencia,VE,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+3625549,Valencia,VE,qol_zh,zh,gpt-4o-mini-synthetic,6.4,6.4
+3625549,Valencia,VE,pop_en,en,gpt-4o-mini-synthetic,1.76,1.76
+3462377,Goiânia,BR,qol_en,en,gpt-4o-mini-synthetic,8.1,8.1
+3462377,Goiânia,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.6,8.6
+3462377,Goiânia,BR,pop_en,en,gpt-4o-mini-synthetic,1.55,1.55
+3405870,Belém,BR,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+3405870,Belém,BR,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+3405870,Belém,BR,pop_en,en,gpt-4o-mini-synthetic,1.19,1.19
+3452925,Porto Alegre,BR,qol_en,en,gpt-4o-mini-synthetic,8.7,8.7
+3452925,Porto Alegre,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.7,8.7
+3452925,Porto Alegre,BR,pop_en,en,gpt-4o-mini-synthetic,1.33,1.33
+3439389,Asunción,PY,qol_en,en,gpt-4o-mini-synthetic,7.0,7.0
+3439389,Asunción,PY,qol_zh,zh,gpt-4o-mini-synthetic,6.6,6.6
+3439389,Asunción,PY,pop_en,en,gpt-4o-mini-synthetic,1.05,1.05
+3946083,Callao,PE,qol_en,en,gpt-4o-mini-synthetic,8.0,8.0
+3946083,Callao,PE,qol_zh,zh,gpt-4o-mini-synthetic,7.8,7.8
+3946083,Callao,PE,pop_en,en,gpt-4o-mini-synthetic,0.89,0.89
+3441575,Montevideo,UY,qol_en,en,gpt-4o-mini-synthetic,7.9,7.9
+3441575,Montevideo,UY,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+3441575,Montevideo,UY,pop_en,en,gpt-4o-mini-synthetic,1.54,1.54
+3648522,Barquisimeto,VE,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+3648522,Barquisimeto,VE,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+3648522,Barquisimeto,VE,pop_en,en,gpt-4o-mini-synthetic,0.71,0.71
+3689147,Barranquilla,CO,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+3689147,Barranquilla,CO,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+3689147,Barranquilla,CO,pop_en,en,gpt-4o-mini-synthetic,1.12,1.12
+3461786,Guarulhos,BR,qol_en,en,gpt-4o-mini-synthetic,8.2,8.2
+3461786,Guarulhos,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.3,8.3
+3461786,Guarulhos,BR,pop_en,en,gpt-4o-mini-synthetic,1.33,1.33
+3395981,Maceió,BR,qol_en,en,gpt-4o-mini-synthetic,8.8,8.8
+3395981,Maceió,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.6,8.6
+3395981,Maceió,BR,pop_en,en,gpt-4o-mini-synthetic,1.32,1.32
+3467865,Campinas,BR,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+3467865,Campinas,BR,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+3467865,Campinas,BR,pop_en,en,gpt-4o-mini-synthetic,1.5,1.5
+3947322,Arequipa,PE,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+3947322,Arequipa,PE,qol_zh,zh,gpt-4o-mini-synthetic,7.6,7.6
+3947322,Arequipa,PE,pop_en,en,gpt-4o-mini-synthetic,1.33,1.33
+3645528,Ciudad Guayana,VE,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+3645528,Ciudad Guayana,VE,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+3645528,Ciudad Guayana,VE,pop_en,en,gpt-4o-mini-synthetic,0.67,0.67
+3838583,Rosario,AR,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+3838583,Rosario,AR,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+3838583,Rosario,AR,pop_en,en,gpt-4o-mini-synthetic,0.63,0.63
+3691175,Trujillo,PE,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+3691175,Trujillo,PE,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+3691175,Trujillo,PE,pop_en,en,gpt-4o-mini-synthetic,1.0,1.0
+3388368,São Luís,BR,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+3388368,São Luís,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+3388368,São Luís,BR,pop_en,en,gpt-4o-mini-synthetic,0.76,0.76
+3687238,Cartagena,CO,qol_en,en,gpt-4o-mini-synthetic,6.8,6.8
+3687238,Cartagena,CO,qol_zh,zh,gpt-4o-mini-synthetic,6.9,6.9
+3687238,Cartagena,CO,pop_en,en,gpt-4o-mini-synthetic,0.85,0.85
+3467747,Campo Grande,BR,qol_en,en,gpt-4o-mini-synthetic,8.4,8.4
+3467747,Campo Grande,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.5,8.5
+3467747,Campo Grande,BR,pop_en,en,gpt-4o-mini-synthetic,1.11,1.11
+3394023,Natal,BR,qol_en,en,gpt-4o-mini-synthetic,7.6,7.6
+3394023,Natal,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.0,8.0
+3394023,Natal,BR,pop_en,en,gpt-4o-mini-synthetic,0.95,0.95
+3386496,Teresina,BR,qol_en,en,gpt-4o-mini-synthetic,6.1,6.1
+3386496,Teresina,BR,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+3386496,Teresina,BR,pop_en,en,gpt-4o-mini-synthetic,0.7,0.7
+3919968,Cochabamba,BO,qol_en,en,gpt-4o-mini-synthetic,6.3,6.3
+3919968,Cochabamba,BO,qol_zh,zh,gpt-4o-mini-synthetic,6.5,6.5
+3919968,Cochabamba,BO,pop_en,en,gpt-4o-mini-synthetic,1.15,1.15
+3456160,Nova Iguaçu,BR,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+3456160,Nova Iguaçu,BR,qol_zh,zh,gpt-4o-mini-synthetic,7.2,7.2
+3456160,Nova Iguaçu,BR,pop_en,en,gpt-4o-mini-synthetic,1.24,1.24
+3464374,Duque de Caxias,BR,qol_en,en,gpt-4o-mini-synthetic,7.3,7.3
+3464374,Duque de Caxias,BR,qol_zh,zh,gpt-4o-mini-synthetic,8.1,8.1
+3464374,Duque de Caxias,BR,pop_en,en,gpt-4o-mini-synthetic,0.96,0.96
+3397277,João Pessoa,BR,qol_en,en,gpt-4o-mini-synthetic,5.7,5.7
+3397277,João Pessoa,BR,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+3397277,João Pessoa,BR,pop_en,en,gpt-4o-mini-synthetic,0.91,0.91
+3648559,Barcelona,VE,qol_en,en,gpt-4o-mini-synthetic,7.7,7.7
+3648559,Barcelona,VE,qol_zh,zh,gpt-4o-mini-synthetic,7.9,7.9
+3648559,Barcelona,VE,pop_en,en,gpt-4o-mini-synthetic,0.78,0.78
+3685533,Cúcuta,CO,qol_en,en,gpt-4o-mini-synthetic,6.0,6.0
+3685533,Cúcuta,CO,qol_zh,zh,gpt-4o-mini-synthetic,5.9,5.9
+3685533,Cúcuta,CO,pop_en,en,gpt-4o-mini-synthetic,0.58,0.58
+3449344,São Bernardo do Campo,BR,qol_en,en,gpt-4o-mini-synthetic,6.6,6.6
+3449344,São Bernardo do Campo,BR,qol_zh,zh,gpt-4o-mini-synthetic,6.8,6.8
+3449344,São Bernardo do Campo,BR,pop_en,en,gpt-4o-mini-synthetic,1.12,1.12
+2357048,Ouagadougou,BF,qol_en,en,gpt-4o-mini-synthetic,6.4,6.4
+2357048,Ouagadougou,BF,qol_zh,zh,gpt-4o-mini-synthetic,6.0,6.0
+2357048,Ouagadougou,BF,pop_en,en,gpt-4o-mini-synthetic,2.74,2.74
+2365267,Lomé,TG,qol_en,en,gpt-4o-mini-synthetic,7.5,7.5
+2365267,Lomé,TG,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+2365267,Lomé,TG,pop_en,en,gpt-4o-mini-synthetic,2.1,2.1
+2260535,Brazzaville,CG,qol_en,en,gpt-4o-mini-synthetic,6.5,6.5
+2260535,Brazzaville,CG,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+2260535,Brazzaville,CG,pop_en,en,gpt-4o-mini-synthetic,2.37,2.37
+2422465,Conakry,GN,qol_en,en,gpt-4o-mini-synthetic,6.2,6.2
+2422465,Conakry,GN,qol_zh,zh,gpt-4o-mini-synthetic,6.3,6.3
+2422465,Conakry,GN,pop_en,en,gpt-4o-mini-synthetic,1.41,1.41
+2422488,Camayenne,GN,qol_en,en,gpt-4o-mini-synthetic,5.9,5.9
+2422488,Camayenne,GN,qol_zh,zh,gpt-4o-mini-synthetic,6.2,6.2
+2422488,Camayenne,GN,pop_en,en,gpt-4o-mini-synthetic,1.66,1.66
+2274895,Monrovia,LR,qol_en,en,gpt-4o-mini-synthetic,7.4,7.4
+2274895,Monrovia,LR,qol_zh,zh,gpt-4o-mini-synthetic,7.3,7.3
+2274895,Monrovia,LR,pop_en,en,gpt-4o-mini-synthetic,1.65,1.65
+2377450,Nouakchott,MR,qol_en,en,gpt-4o-mini-synthetic,7.1,7.1
+2377450,Nouakchott,MR,qol_zh,zh,gpt-4o-mini-synthetic,6.7,6.7
+2377450,Nouakchott,MR,pop_en,en,gpt-4o-mini-synthetic,0.56,0.56
+2147714,Sydney,AU,qol_en,en,gpt-4o-mini-synthetic,6.7,6.7
+2147714,Sydney,AU,qol_zh,zh,gpt-4o-mini-synthetic,7.1,7.1
+2147714,Sydney,AU,pop_en,en,gpt-4o-mini-synthetic,4.64,4.64
+2158177,Melbourne,AU,qol_en,en,gpt-4o-mini-synthetic,10.0,10.0
+2158177,Melbourne,AU,qol_zh,zh,gpt-4o-mini-synthetic,9.8,9.8
+2158177,Melbourne,AU,pop_en,en,gpt-4o-mini-synthetic,5.65,5.65
+2174003,Brisbane,AU,qol_en,en,gpt-4o-mini-synthetic,9.1,9.1
+2174003,Brisbane,AU,qol_zh,zh,gpt-4o-mini-synthetic,9.7,9.7
+2174003,Brisbane,AU,pop_en,en,gpt-4o-mini-synthetic,4.5,4.5
+2063523,Perth,AU,qol_en,en,gpt-4o-mini-synthetic,8.9,8.9
+2063523,Perth,AU,qol_zh,zh,gpt-4o-mini-synthetic,9.2,9.2
+2063523,Perth,AU,pop_en,en,gpt-4o-mini-synthetic,2.72,2.72
