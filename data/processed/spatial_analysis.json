@@ -1,0 +1,62 @@
+{
+  "ground_truth_sensitivity": {
+    "Within-continent GDP": {
+      "R2": 0.594,
+      "gdp_coef": -1.883,
+      "gdp_p": 0.0,
+      "bias_gdp_corr": -0.656
+    },
+    "Global GDP": {
+      "R2": 0.63,
+      "gdp_coef": -1.76,
+      "gdp_p": 0.0,
+      "bias_gdp_corr": -0.869
+    },
+    "Population proxy": {
+      "R2": 0.656,
+      "gdp_coef": 0.533,
+      "gdp_p": 0.0,
+      "bias_gdp_corr": 0.217
+    },
+    "GDP+Internet composite": {
+      "R2": 0.593,
+      "gdp_coef": -1.19,
+      "gdp_p": 0.0,
+      "bias_gdp_corr": -0.536
+    }
+  },
+  "gt_cross_correlation": {
+    "bias_gt1": {
+      "bias_gt1": 1.0,
+      "bias_gt2": 0.781,
+      "bias_gt3": 0.085,
+      "bias_gt4": 0.91
+    },
+    "bias_gt2": {
+      "bias_gt1": 0.781,
+      "bias_gt2": 1.0,
+      "bias_gt3": 0.041,
+      "bias_gt4": 0.641
+    },
+    "bias_gt3": {
+      "bias_gt1": 0.085,
+      "bias_gt2": 0.041,
+      "bias_gt3": 1.0,
+      "bias_gt4": 0.065
+    },
+    "bias_gt4": {
+      "bias_gt1": 0.91,
+      "bias_gt2": 0.641,
+      "bias_gt3": 0.065,
+      "bias_gt4": 1.0
+    }
+  },
+  "cross_model": {
+    "pearson_r": 0.9768,
+    "pearson_p": 0.0,
+    "wilcoxon_p": 0.0175,
+    "gpt_mean": 3.482,
+    "claude_mean": 3.541,
+    "mean_abs_diff": 0.376
+  }
+}

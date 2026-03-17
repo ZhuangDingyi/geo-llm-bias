@@ -1,0 +1,240 @@
+{
+  "ablation": [
+    {
+      "Specification": "Full model",
+      "R2": 0.594,
+      "Adj_R2": 0.586,
+      "AIC": 1651.8,
+      "N": 468
+    },
+    {
+      "Specification": "No continent FE",
+      "R2": 0.332,
+      "Adj_R2": 0.326,
+      "AIC": 1875.3,
+      "N": 468
+    },
+    {
+      "Specification": "GDP only",
+      "R2": 0.164,
+      "Adj_R2": 0.162,
+      "AIC": 1974.0,
+      "N": 468
+    },
+    {
+      "Specification": "Internet only",
+      "R2": 0.01,
+      "Adj_R2": 0.008,
+      "AIC": 2053.1,
+      "N": 468
+    },
+    {
+      "Specification": "Wiki only",
+      "R2": 0.0,
+      "Adj_R2": -0.002,
+      "AIC": 2057.7,
+      "N": 468
+    },
+    {
+      "Specification": "No wiki",
+      "R2": 0.591,
+      "Adj_R2": 0.583,
+      "AIC": 1654.0,
+      "N": 468
+    },
+    {
+      "Specification": "No internet",
+      "R2": 0.554,
+      "Adj_R2": 0.546,
+      "AIC": 1693.9,
+      "N": 468
+    },
+    {
+      "Specification": "Global GT",
+      "R2": 0.63,
+      "Adj_R2": 0.623,
+      "AIC": 1452.1,
+      "N": 468
+    }
+  ],
+  "vif": [
+    {
+      "Variable": "log_gdp_pc",
+      "VIF": 163.43
+    },
+    {
+      "Variable": "internet_pct",
+      "VIF": 51.92
+    },
+    {
+      "Variable": "log_wiki",
+      "VIF": 2.74
+    },
+    {
+      "Variable": "log_pop",
+      "VIF": 68.61
+    }
+  ],
+  "spatial_robustness": [
+    {
+      "k": 3,
+      "Moran_I": 0.7101,
+      "z_score": 20.47,
+      "p_value": 0.001
+    },
+    {
+      "k": 5,
+      "Moran_I": 0.6733,
+      "z_score": 25.09,
+      "p_value": 0.001
+    },
+    {
+      "k": 8,
+      "Moran_I": 0.5774,
+      "z_score": 27.08,
+      "p_value": 0.001
+    },
+    {
+      "k": 10,
+      "Moran_I": 0.5507,
+      "z_score": 28.93,
+      "p_value": 0.001
+    },
+    {
+      "k": 15,
+      "Moran_I": 0.4996,
+      "z_score": 32.36,
+      "p_value": 0.001
+    }
+  ],
+  "size_heterogeneity": [
+    {
+      "pop_quartile": "Small (<500K)",
+      "mean": 2.865,
+      "std": 2.383,
+      "count": 117,
+      "median": 3.684
+    },
+    {
+      "pop_quartile": "Medium (0.5-1M)",
+      "mean": 3.728,
+      "std": 2.087,
+      "count": 117,
+      "median": 4.715
+    },
+    {
+      "pop_quartile": "Large (1-2M)",
+      "mean": 3.581,
+      "std": 2.076,
+      "count": 117,
+      "median": 4.308
+    },
+    {
+      "pop_quartile": "Mega (>2M)",
+      "mean": 3.756,
+      "std": 2.036,
+      "count": 117,
+      "median": 4.715
+    }
+  ],
+  "size_gdp_effect": [
+    {
+      "Size": "Small (<500K)",
+      "beta_GDP": -0.913,
+      "p": 0.0,
+      "R2": 0.222,
+      "n": 117
+    },
+    {
+      "Size": "Medium (0.5-1M)",
+      "beta_GDP": -0.915,
+      "p": 0.0,
+      "R2": 0.225,
+      "n": 117
+    },
+    {
+      "Size": "Large (1-2M)",
+      "beta_GDP": -0.618,
+      "p": 0.002,
+      "R2": 0.122,
+      "n": 117
+    },
+    {
+      "Size": "Mega (>2M)",
+      "beta_GDP": -0.5,
+      "p": 0.009,
+      "R2": 0.077,
+      "n": 117
+    }
+  ],
+  "decile_stats": [
+    {
+      "gdp_decile": "(413.757, 1830.008]",
+      "mean": 3.8321122590146612,
+      "sem": 0.15424490061361606,
+      "count": 48
+    },
+    {
+      "gdp_decile": "(1830.008, 2708.0]",
+      "mean": 4.7722839454459045,
+      "sem": 0.21166080522734065,
+      "count": 46
+    },
+    {
+      "gdp_decile": "(2708.0, 5190.17]",
+      "mean": 3.8658614869649073,
+      "sem": 0.2691185438963311,
+      "count": 50
+    },
+    {
+      "gdp_decile": "(5190.17, 10310.549]",
+      "mean": 2.713817907792195,
+      "sem": 0.32556444279608676,
+      "count": 62
+    },
+    {
+      "gdp_decile": "(10310.549, 13303.148]",
+      "mean": 4.649738580910811,
+      "sem": 0.03446348519364955,
+      "count": 126
+    },
+    {
+      "gdp_decile": "(13303.148, 15981.541]",
+      "mean": 4.040552821572754,
+      "sem": 0.14713906382085865,
+      "count": 42
+    },
+    {
+      "gdp_decile": "(15981.541, 51165.365]",
+      "mean": 2.9918605314608113,
+      "sem": 0.19475357316105701,
+      "count": 47
+    },
+    {
+      "gdp_decile": "(51165.365, 90674.067]",
+      "mean": -0.6682819665118712,
+      "sem": 0.31297659123228544,
+      "count": 47
+    }
+  ],
+  "language_regression": {
+    "R2": 0.065,
+    "N": 468,
+    "gdp_coef": -0.0508,
+    "gdp_p": 0.311,
+    "internet_coef": -0.0031,
+    "internet_p": 0.297
+  },
+  "interaction": {
+    "coef": -0.0068,
+    "p": 0.458,
+    "R2": 0.596
+  },
+  "cross_model": {
+    "gpt_bias_mean": 3.482,
+    "claude_bias_mean": 3.541,
+    "claude_gdp_coef": -1.836,
+    "claude_gdp_p": 0.0,
+    "claude_R2": 0.562
+  }
+}

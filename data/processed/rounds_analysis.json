@@ -1,0 +1,73 @@
+{
+  "ridge": {
+    "alpha": 100.0,
+    "gdp_coef_std": -0.9283,
+    "internet_coef_std": 0.2594,
+    "R2": 0.4676
+  },
+  "nonlinearity": {
+    "F_stat": 56.979,
+    "F_p": NaN,
+    "linear_R2": 0.5942,
+    "quad_R2": 0.6447,
+    "gdp_sq_coef": -0.4306,
+    "gdp_sq_p": 0.0,
+    "kruskal_H": 161.97,
+    "kruskal_p": 0.0
+  },
+  "language_mechanism": {
+    "R2_full": 0.0654,
+    "east_asia_coef": -0.0106,
+    "east_asia_p": 0.9059,
+    "continent_effects": [
+      {
+        "continent": "Africa",
+        "mean": 0.3684210526315789,
+        "se": 0.09574787716738378,
+        "p": 0.0003077728933433973,
+        "n": 57
+      },
+      {
+        "continent": "Asia",
+        "mean": 0.1115702479338843,
+        "se": 0.030983447104466006,
+        "p": 0.00038490964764590095,
+        "n": 242
+      },
+      {
+        "continent": "Europe",
+        "mean": 0.28125,
+        "se": 0.060866551595885596,
+        "p": 1.9421279357260654e-05,
+        "n": 64
+      },
+      {
+        "continent": "North America",
+        "mean": 0.29411764705882354,
+        "se": 0.07563647655680748,
+        "p": 0.00029804510778047973,
+        "n": 51
+      },
+      {
+        "continent": "Oceania",
+        "mean": 0.0,
+        "se": 0.0,
+        "p": NaN,
+        "n": 4
+      },
+      {
+        "continent": "South America",
+        "mean": 0.28,
+        "se": 0.06414269805898185,
+        "p": 6.545888105558894e-05,
+        "n": 50
+      }
+    ]
+  },
+  "mediation": {
+    "gdp_wiki_beta": 0.1405,
+    "gdp_bias_direct": -1.262,
+    "gdp_bias_controlled": -1.2587,
+    "wiki_mediation_pct": 0.3
+  }
+}

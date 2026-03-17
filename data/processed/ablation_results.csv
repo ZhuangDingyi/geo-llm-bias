@@ -1,0 +1,9 @@
+Specification,R2,Adj_R2,AIC,N
+Full model,0.594,0.586,1651.8,468
+No continent FE,0.332,0.326,1875.3,468
+GDP only,0.164,0.162,1974.0,468
+Internet only,0.01,0.008,2053.1,468
+Wiki only,0.0,-0.002,2057.7,468
+No wiki,0.591,0.583,1654.0,468
+No internet,0.554,0.546,1693.9,468
+Global GT,0.63,0.623,1452.1,468
