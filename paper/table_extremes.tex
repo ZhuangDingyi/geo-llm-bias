@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{\textbf{Most and Least Biased Cities} (Top/Bottom 10 by Bias Score)}
+\label{tab:extremes}
+\begin{tabular}{lllSSS}
+\toprule
+City & Country & Continent & LLM Rating & {GT Score} & {Bias Score} \\
+\midrule
+\multicolumn{6}{l}{\textit{Overestimated (positive bias)}}\\
+  Kigali & RW & Africa & 8.0 & 1.71 & 6.29 \\
+  Kyiv & UA & Europe & 7.0 & 1.00 & 6.00 \\
+  Odesa & UA & Europe & 7.0 & 1.00 & 6.00 \\
+  Lviv & UA & Europe & 7.0 & 1.00 & 6.00 \\
+  Santa Cruz de la Sierra & BO & South America & 7.0 & 1.09 & 5.91 \\
+  Cochabamba & BO & South America & 7.0 & 1.09 & 5.91 \\
+  Mumbai & IN & Asia & 7.0 & 1.23 & 5.77 \\
+  Bengaluru & IN & Asia & 7.0 & 1.23 & 5.77 \\
+  Hyderabad & IN & Asia & 7.0 & 1.23 & 5.77 \\
+  Ahmedabad & IN & Asia & 7.0 & 1.23 & 5.77 \\
+\midrule
+\multicolumn{6}{l}{\textit{Underestimated (negative bias)}}\\
+  Tripoli & LY & Africa & 4.0 & 10.00 & -6.00 \\
+  The Bronx & US & North America & 6.0 & 10.00 & -4.00 \\
+  Johannesburg & ZA & Africa & 6.0 & 9.55 & -3.55 \\
+  Soweto & ZA & Africa & 6.0 & 9.55 & -3.55 \\
+  New York City & US & North America & 7.0 & 10.00 & -3.00 \\
+  Los Angeles & US & North America & 7.0 & 10.00 & -3.00 \\
+  Brooklyn & US & North America & 7.0 & 10.00 & -3.00 \\
+  Chicago & US & North America & 7.0 & 10.00 & -3.00 \\
+  Queens & US & North America & 7.0 & 10.00 & -3.00 \\
+  Houston & US & North America & 7.0 & 10.00 & -3.00 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small\textit{Notes:} LLM Rating from GPT-4o-mini (English prompt, scale 1--10). GT Score is GDP-normalized within continent. Bias Score = LLM Rating $-$ GT Score.
+\end{flushleft}
+\end{table}

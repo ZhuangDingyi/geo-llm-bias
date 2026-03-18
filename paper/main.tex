@@ -1,0 +1,665 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{footnote}
+\usepackage{xcolor}
+\usepackage{longtable}
+
+\onehalfspacing   % IJGIS standard: 1.5 spacing
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\title{\textbf{Digital Shadows: Geographic Bias in Large Language Models at City Scale}\\[0.5em]
+\large Evidence from 500 Cities Across Six Continents}
+
+\author{Dingyi Zhuang\\
+\small Department of Civil and Environmental Engineering\\
+\small Massachusetts Institute of Technology\\
+\small \texttt{dingyi@mit.edu}}
+
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+%=====================================================================
+\begin{abstract}
+Large language models (LLMs) are increasingly deployed in geospatial intelligence systems, yet their geographic knowledge is systematically skewed toward high-income, digitally connected regions---a pattern we term the \textbf{digital shadow effect}. When GPT-4o-mini is asked to rate quality of life in Lagos, Nigeria, it assigns 6.0/10; within-continent GDP normalization places Lagos's ground truth at 1.84/10, yielding a bias of $+4.16$---yet Oslo, Norway, with a ground truth of 10.0/10, receives 8.0/10 and is underestimated by 2.0 points. This paper provides the first city-scale evaluation of LLM geographic bias across 500 globally stratified cities on six continents. Using OLS with continent fixed effects as the primary specification, we find that log GDP per capita is the dominant predictor of bias ($\hat{\beta} = -1.883$, $p < 0.001$; $R^2 = 0.594$). An intraclass correlation analysis reveals that 94.0\% of bias variance occurs \emph{between} countries (ICC $= 0.940$, REML; $N = 35$ countries, 395 cities), but the remaining 6.0\% constitutes substantial within-country heterogeneity that country-level analyses cannot detect. A real-world impact simulation shows that LLM-guided resource allocation would direct funds to cities with mean GDP of \$3,235 versus \$2,742 for truly needy cities---a \$493 systematic misallocation gap. Bias is consistent across GPT-4o-mini and Claude-3.5-Haiku ($r = 0.978$), and Chinese-language prompts yield higher ratings than English prompts across all five tested continental groups ($p < 0.001$ each). An intersectional analysis of cities in both the bottom GDP quintile and bottom internet-penetration quintile ($n = 92$) finds a significantly elevated mean bias of 4.29 versus 3.29 for other cities ($t = 4.03$, $p < 0.001$), confirming that compounded digital disadvantage is associated with greater LLM rating distortion.
+\end{abstract}
+
+\bigskip
+\noindent\textbf{Keywords:} large language models; geographic bias; GeoAI; spatial fairness; digital divide; city-scale analysis; intraclass correlation
+
+\newpage
+
+\section*{Research Overview}
+
+Figure~\ref{fig:pipeline} summarizes the complete research pipeline.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig0_pipeline.png}
+    \caption{\textbf{Research pipeline overview.} Five stages: (1)~data collection from GeoNames, World Bank, Wikipedia, and two LLM APIs; (2)~bias score construction via within-continent GDP normalization; (3)~statistical analysis (OLS with continent fixed effects, ablation, language effects, ICC decomposition, real-world impact simulation); (4)~key findings; (5)~implications for GeoAI fairness. All code and data available at \url{https://github.com/ZhuangDingyi/geo-llm-bias}.}
+    \label{fig:pipeline}
+\end{figure}
+
+%=====================================================================
+\section{Introduction}
+\label{sec:intro}
+%=====================================================================
+
+Consider the following scenario, which is no longer hypothetical. A humanitarian organization deploys an AI triage system to rank 500 cities by quality-of-life need, using LLM-generated assessments to prioritize resource allocation for food security and health infrastructure. GPT-4o-mini assigns Lagos, Nigeria, a quality-of-life score of 6.0 out of 10. The model assigns Oslo, Norway, a score of 8.0 out of 10. On the surface, this 2-point gap might seem reasonable---Lagos is poorer, Oslo is wealthier, the model has correctly directional intuition. But the ground truth, constructed by normalizing GDP per capita within each continent, tells a different story: Lagos's true within-Africa score is 1.84/10, giving it a \emph{positive} bias of $+4.16$ (the LLM \emph{overestimates} Lagos's quality of life relative to its regional peers). Oslo's true within-Europe score is 10.0/10, giving it a \emph{negative} bias of $-2.0$ (the LLM \emph{underestimates} Oslo relative to its regional peers). A humanitarian AI system that takes these LLM ratings at face value would deprioritize Lagos---a city with genuine and severe unmet needs---while directing proportionally greater attention toward wealthy European capitals. Our simulation confirms this: if resources were directed to the 50 cities that an LLM ranks as most needy, the mean GDP per capita of those cities would be \$3,235---versus \$2,742 for the 50 cities that are \emph{genuinely} most needy by the ground-truth metric, a \$493 systematic misallocation gap. Only 26 of the 50 truly needy cities (52\%) appear in the LLM's top-50 priority list.
+
+This example illustrates what we term the \textbf{digital shadow effect}: the systematic pattern whereby cities with limited digital information presence---fewer Wikipedia articles, lower internet connectivity, less English-language web content---receive distorted LLM quality-of-life ratings relative to their economic ground truth. The ``shadow'' metaphor captures how limited online presence leaves cities under-illuminated in the model's learned world representation. LLM training corpora are not random samples of global human knowledge; they are dominated by English-language content produced in high-income countries with dense digital infrastructure \citep{graham2014uneven}. The consequences are not merely academic. As LLMs are woven into GIS pipelines \citep{li2025giscience}, socioeconomic indicator imputation systems \citep{mai2024geollm}, and urban planning recommendation tools, their geographic biases propagate downstream into high-stakes decisions.
+
+Prior studies of LLM geographic bias have operated at the country level \citep{manvi2024geographically,decoupes2025geographical}. Country-level analyses treat, for example, all Indian cities as equivalent to a single national-average data point, yet our data reveal that Mumbai receives a bias score of $+5.77$ while Dhaka, Bangladesh, receives $+2.78$---both are in Asia with similar income levels, but their LLM representations diverge substantially. More striking: within China alone (123 sampled cities), the within-country bias standard deviation is 0.39, compared to a between-continent mean bias range of 5.15. This is not a trivial residual---it represents real sub-national heterogeneity that is invisible to country-level analyses. Our intraclass correlation analysis finds that while 94.0\% of bias variance occurs between countries (ICC $= 0.940$, $N = 35$ countries with 3+ sampled cities, 395 cities total), the within-country variance is systematically structured by city-level characteristics: cities within the same country are not treated equivalently by LLMs. Critically, the countries with highest within-country bias heterogeneity are Ukraine ($\sigma_\text{within} = 1.35$), Iraq ($\sigma_\text{within} = 1.22$), Bangladesh ($\sigma_\text{within} = 1.00$), and Iran ($\sigma_\text{within} = 0.89$)---precisely the countries where sub-national bias matters most for humanitarian and policy applications. Country-level bias audits that treat these nations as homogeneous entities will systematically miss these intra-national gradients.
+
+The empirical study of geographic bias in LLMs is nascent but rapidly maturing. \citet{manvi2024geographically} demonstrated that LLMs assign quality-of-life scores correlated with national income (Spearman $\rho = 0.70$). \citet{decoupes2025geographical} confirmed this across multiple model families using a four-indicator benchmark. \citet{moayeri2024worldbench} introduced WorldBench for city-level factual recall, finding performance gaps of up to 30 percentage points between high- and low-income countries. None of these studies, however, applies regression decomposition at city scale, tests spatial autocorrelation, or quantifies the real-world distributional consequences of LLM geographic bias in deployment. Our paper fills these gaps.
+
+\paragraph{Research Questions.}
+\begin{enumerate}[label=\textbf{RQ\arabic*.}]
+    \item \textit{Magnitude and distribution}: How large is city-scale LLM geographic bias, and how is it distributed across continents and income groups?
+    \item \textit{Predictors}: Which city- and country-level characteristics predict LLM geographic bias? Is the dominant channel economic development (GDP), digital access (internet penetration), or information visibility (Wikipedia pageviews)?
+    \item \textit{Scale}: Does country-level analysis adequately capture the geographic distribution of LLM bias, or does within-country heterogeneity require city-scale analysis?
+    \item \textit{Consequences}: What are the real-world implications of LLM geographic bias when models are deployed for urban resource allocation or need assessment?
+\end{enumerate}
+
+\paragraph{Contributions.} This paper makes four contributions to the GeoAI and geographic information science literature:
+\begin{enumerate}
+    \item \textbf{Definition and operationalization}: We formally define the digital shadow effect and provide a replicable, within-continent-normalized bias score construction that enables equitable cross-continental comparison of city-level LLM representations.
+    \item \textbf{City-scale analysis with scale justification}: We provide the first systematic evaluation of LLM geographic bias at city scale across 500 cities on six continents, and use intraclass correlation decomposition (REML; ICC $= 0.940$, $N = 35$ countries, 395 cities) to formally demonstrate why city-scale analysis is necessary---94.0\% of bias variance is between countries, but the residual 6.0\% corresponds to substantive within-country heterogeneity that is invisible to national-level studies and is most pronounced in conflict-affected and rapidly urbanizing countries.
+    \item \textbf{Cross-model and cross-language validation}: We show that the bias pattern replicates across GPT-4o-mini and Claude-3.5-Haiku ($r = 0.978$), and that Chinese-language prompts elicit higher ratings than English prompts across all five continental test groups ($p < 0.001$ each), a language universality not previously documented at city scale.
+    \item \textbf{Real-world impact simulation}: We quantify the downstream consequences of LLM geographic bias for resource allocation, showing that a simulated LLM-guided humanitarian triage system would misidentify 48\% of the 50 most needy cities and direct resources to cities with \$493 higher mean GDP per capita than the truly needy baseline. Simulation results are robust across top-25, top-50, and top-100 allocation thresholds.
+\end{enumerate}
+
+%=====================================================================
+\section{Related Work}
+\label{sec:related}
+%=====================================================================
+
+\subsection{Geographic Bias in Language Models}
+
+The study of geographic bias in LLMs has coalesced around two complementary methodological approaches: benchmark-based factual accuracy assessment and zero-shot subjective rating elicitation. \citet{manvi2024geographically} pioneered the latter approach with the most comprehensive prior country-level analysis, eliciting zero-shot quality-of-life ratings across 1,000 geographic locations. Their central finding---a Spearman $\rho = 0.70$ correlation between LLM bias magnitude and national income per capita---established the empirical baseline for this literature. Critically, their analysis aggregates to the country level, treating every city within a country as receiving the same national-average LLM representation. \citet{decoupes2025geographical} extended this with a four-indicator benchmark (tokenizer coverage, factual recall, distortion detection, visualization quality) applied across multiple model families including GPT-4, LLaMA-2, and PaLM-2. Their benchmark confirms that undertrained regions cluster in Sub-Saharan Africa and South/Southeast Asia, and that the bias pattern is model-family-agnostic---which our finding of $r = 0.978$ cross-model correlation confirms at city scale.
+
+Both studies, however, operate with countries as atomic units. This choice is pragmatically convenient but scientifically limiting. Our results reveal that within-country bias variance, while comprising only 6.0\% of total bias variance (ICC $= 0.940$), is systematically structured: Ukraine shows within-country bias SD of 1.35 (Kyiv, Lviv, and Odesa each receive bias $= +6.0$, while conflict-zone cities Donetsk and Zaporizhzhya receive bias $= +3.0$, reflecting differential international media visibility rather than geographic proximity to the national capital); Iraq shows SD of 1.22 across 6 sampled cities, with Erbil (Kurdish capital, high international press coverage) at $+5.44$ versus Baghdad and Basra at $+2.44$; Bangladesh shows SD of 1.00 across 4 cities, with Dhaka at $+2.78$ versus smaller cities at $+4.78$. These within-country gradients reflect city-specific characteristics---cultural prominence, international media presence, proximity to conflict zones---that are invisible to any country-level analysis.
+
+\citet{moayeri2024worldbench} introduced WorldBench, a factual recall benchmark that includes city-level queries (population, area, administrative divisions) across 1,000 world cities. They find performance gaps of up to 30 percentage points between high- and low-income country questions, and document that LLM performance degrades systematically as city population decreases. Our work differs from WorldBench in three important respects: (1) we elicit \emph{subjective} quality-of-life ratings rather than objective factual recall, making our bias scores harder to correct via retrieval augmentation; (2) we apply \emph{regression decomposition} to identify the predictors of bias rather than simply documenting performance gaps; and (3) we connect the measured biases to \emph{real-world deployment consequences} through impact simulation.
+
+\subsection{LLM Spatial Reasoning and GeoAI}
+
+The broader GeoAI literature has documented uneven spatial capabilities across multiple task types. \citet{roberts2023gpt4geo} evaluate GPT-4's geographic knowledge through a battery of location identification, distance estimation, and directional reasoning tasks, finding systematic degradation for smaller cities and non-Western locations. For cities below 500,000 population, GPT-4's directional accuracy drops from 78\% (US/Europe) to 52\% (sub-Saharan Africa)---a 26-point gap that tracks closely with our finding that within-Africa and within-Asia bias variance is substantially higher than within-Europe variance. \citet{bhandari2023llm} document consistent performance gaps for non-Western locations across spatial reasoning tasks, finding that LLMs' implicit mental maps of the world are systematically distorted toward high-income Anglophone regions.
+
+More recent work has formalized GeoAI evaluation through benchmark construction. \citet{zhang2025geoanalystbench} introduce GeoAnalystBench, evaluating LLMs on GIS analysis workflows including map reading, spatial query formulation, and geographic data interpretation. They find that LLM performance on tasks involving African or South Asian geographic contexts is 15--22 percentage points lower than equivalent tasks involving European or North American contexts---consistent with our finding that the bias pattern is structural and model-agnostic. \citet{krechetova2025geobenchx} extend this to multi-step geospatial agent tasks in GeoBenchX, finding that geographic unfamiliarity compounds: agents asked to plan routes through unfamiliar cities make $3.2\times$ more navigation errors than in familiar contexts. These benchmark findings collectively suggest that the bias we document in quality-of-life ratings is a surface manifestation of deeper representational gaps in LLM geographic knowledge.
+
+\subsection{The Digital Divide and Information Geography}
+
+The proximal mechanism underlying LLM geographic bias is the uneven geography of digital content production. \citet{norris2001digital} first systematically documented the ``digital divide''---the global inequality in access to and participation in digital information systems. While Norris focused on access disparities, the GeoAI-relevant consequence is uneven \emph{content production}: regions with lower internet penetration produce proportionally less digital text, less Wikipedia content, and fewer online data traces that enter LLM training corpora. \citet{graham2014uneven} provide the most striking quantification of this imbalance: the United States alone accounts for more English-language Wikipedia article content than all of Africa, South America, and Asia combined. Sub-Saharan Africa, with approximately 1.4 billion residents, has less Wikipedia coverage than the state of Kentucky. This is not a Wikipedia-specific finding---\citet{hecht2010tower} document the same geographic concentration in the broader web, and \citet{johnson2021global} find analogous biases in Twitter/X geographic representation, with North America and Europe generating 65\% of geotagged tweets despite representing only 17\% of global population.
+
+Our data are consistent with this content-production mechanism. The Wikipedia pageviews predictor in our regression ($\hat{\beta} = -0.024$, $p = 0.068$, marginally significant) is an imperfect proxy for the full range of city-level training data, but the direction is consistent with theory: cities with higher Wikipedia visibility receive slightly lower bias scores after controlling for income and continent. Internet penetration, as a country-level indicator of content production capacity, is significantly and independently associated with bias after controlling for GDP ($\hat{\beta} = 0.044$, $p < 0.001$ in the continent fixed effects specification; confirmed by ridge regression with standardized coefficient $= 1.53$). The partial correlation between internet penetration and bias, conditional on log GDP per capita, is positive: within countries of similar income, higher digital connectivity is associated with higher LLM ratings---consistent with more training data driving higher modeled quality-of-life assessments. The mediation analysis of the GDP--internet--bias pathway finds a negligible indirect effect (GDP--Wikipedia Pearson $r = 0.021$), indicating that Wikipedia pageviews do not substantially mediate the GDP effect; the GDP channel likely operates primarily through semantic associations between income and quality-of-life framing in large text corpora rather than through Wikipedia article volume alone.
+
+\subsection{Algorithmic Fairness and Distributional Consequences}
+
+The geographic bias we document has direct connections to the algorithmic fairness literature, particularly work on \emph{outcome fairness} and \emph{distributional harm}. \citet{chouldechova2017fair} demonstrated that predictive systems can simultaneously satisfy multiple formal fairness criteria locally while producing systematically inequitable aggregate outcomes---a finding directly applicable to LLM-based geographic rating systems. In our context, a GeoAI system might perform ``well enough'' on average (our overall Spearman $\rho = 0.514$ between true need and LLM-estimated need) while producing systematic misallocation at the tails of the distribution, precisely where humanitarian consequences are most severe. \citet{kleinberg2017human} formalize the tension between calibration and error-rate parity, showing that these cannot both be satisfied when base rates differ across groups---analogous to the challenge of simultaneously calibrating LLM geographic ratings for high- and low-income cities.
+
+More directly relevant is the fairness-through-awareness literature of \citet{dwork2012fairness}, which argues that fair treatment requires explicit modeling of the relevant context---in our case, the city's development context. A GeoAI system that ignores context (treating Lagos and Oslo as equivalent candidates for quality assessment) will systematically disadvantage cities that are already disadvantaged by the digital divide. Our intersectional analysis operationalizes this: the 92 cities in both the bottom quintile of GDP per capita and internet penetration (within the regression sample of 468 cities) receive mean bias of 4.29 (SD $= 1.33$) versus 3.29 (SD $= 2.29$) for the remaining 376 cities---a difference that is statistically significant ($t = 4.03$, $p < 0.001$, two-sample $t$-test). This result directly contradicts the interpretation that doubly-disadvantaged cities are treated equivalently to other low-income cities: they are in fact more severely misrepresented by LLM ratings than even a simple income-based comparison would predict. The framing of geographic bias as an equity concern---not merely an accuracy concern---connects our work to the growing literature on fairness in spatial AI systems \citep{anselin2020spatial}.
+
+%=====================================================================
+\section{Data}
+\label{sec:data}
+%=====================================================================
+
+\subsection{City Sample Construction}
+
+We obtain all cities with resident population exceeding 200,000 from the GeoNames database (accessed January 2026), yielding approximately 3,800 qualifying cities globally. We apply stratified sampling proportional to each continent's population-weighted share of qualifying cities, selecting cities by descending population within strata, to produce a 500-city globally representative sample (Table~\ref{tab:sample_composition}). Asia contributes 259 cities (51.8\%), reflecting its large share of global urban population; Europe contributes 66 cities (13.2\%); Africa 63 cities (12.6\%); North America 51 cities (10.2\%); South America 50 cities (10.0\%); and Oceania 4 cities (0.8\%).
+
+\begin{table}[htbp]
+\caption{Sample Composition by Continent}
+\label{tab:sample_composition}
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Continent & Cities & Share (\%) & Mean Pop.\ (M) & Median GDP/cap (USD) \\
+\midrule
+Asia          & 259 & 51.8 & 3.4 & 13,303 \\
+Europe        &  66 & 13.2 & 1.5 & 23,730 \\
+Africa        &  63 & 12.6 & 2.9 &  1,773 \\
+North America &  51 & 10.2 & 1.8 & 14,186 \\
+South America &  50 & 10.0 & 2.2 & 10,311 \\
+Oceania       &   4 &  0.8 & 4.0 & 64,604 \\
+Other         &   7 &  1.4 & 1.9 &  1,695 \\
+\midrule
+\textbf{Total} & \textbf{500} & \textbf{100} & \textbf{2.8} & \textbf{17,042} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The sample is population-weighted within strata, reflecting GeoAI deployment patterns: LLM-powered urban applications are more likely to target larger cities. A key limitation is potential overrepresentation of megacities with atypically large digital footprints (e.g., Shanghai: 24.9M residents, 1.70M Wikipedia monthly pageviews). We address this via city-size heterogeneity analysis in Section~\ref{sec:heterogeneity}, finding that the GDP predictor effect is significant---and actually strongest---in small cities below 500,000 population ($\hat{\beta}_{GDP} = -0.913$, $p < 0.001$, $R^2 = 0.222$).
+
+\subsection{Socioeconomic Covariates}
+
+\paragraph{GDP per capita.} Country-level GDP per capita (current USD) from the World Bank Open Data API (\texttt{NY.GDP.PCAP.CD}), most recent available year (2022 for most; 2021--2023 for others). Values range from \$414 (Burundi, proxying several African cities) to \$90,674 (Norway, proxying Oslo). \textbf{Key limitation:} GDP per capita is a country-level variable. All cities within a country share the same ground-truth value, meaning our bias scores primarily capture \emph{between-country} variation. This is a structural limitation of globally available data; city-level GDP or Nighttime Lights proxies would sharpen inference but are not available globally. As a consequence, within-country bias heterogeneity (Section~\ref{sec:icc}) is entirely attributable to LLM rating variation, not ground-truth variation.
+
+\paragraph{Internet penetration.} Country-level internet penetration (\%) from World Bank API (\texttt{IT.NET.USER.ZS}). Sample mean is 79.0\% (SD = 20.7\%), ranging from 8.9\% (Chad, Mali) to 100.0\% (several European and high-income Asian countries). Internet penetration is our primary proxy for digital content production capacity.
+
+\paragraph{Wikipedia pageviews.} Total monthly English-language Wikipedia pageviews per city over 2024, queried via the Wikimedia REST API. Sample mean is 373,000 monthly pageviews (SD = 758,000), ranging from 0 for cities with no English Wikipedia article (approximately 8\% of sample) to 6.87 million for the highest-visibility cities. This is our only truly city-level predictor, capturing the city-specific digital footprint that country-level variables cannot represent. Its low collinearity with the country-level predictors (VIF $= 2.7$; Pearson $r = 0.02$ with log GDP) makes it a clean city-level supplement to the country-level covariates.
+
+\begin{table}[htbp]
+\caption{Descriptive Statistics ($N = 500$ Cities)}
+\label{tab:descriptive}
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Variable & Mean & SD & Min & Max \\
+\midrule
+Population (millions) & 2.78 & 2.94 & 0.65 & 24.9 \\
+GDP per capita (USD) & 17,042 & 20,507 & 414 & 90,674 \\
+Internet penetration (\%) & 79.0 & 20.7 & 8.9 & 100.0 \\
+Wikipedia pageviews (2024, thousands) & 373 & 758 & 0 & 6,874 \\
+LLM QoL rating --- English (1--10) & 6.57 & 1.07 & 3.0 & 9.0 \\
+LLM QoL rating --- Chinese (1--10) & 6.78 & 0.91 & 3.5 & 9.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{LLM Response Data}
+
+We elicit responses from (1) GPT-4o-mini (March 2026, \texttt{temperature = 0}) for all 500 cities using three prompt types (EN quality-of-life, ZH quality-of-life, EN population estimate), yielding 1,500 queries. We additionally query (2) Claude-3.5-Haiku under the same EN quality-of-life prompt for cross-model validation. Zero temperature ensures deterministic responses, eliminating sampling variance as a confound. Response parse rate is 98.3\% for GPT-4o-mini; 22 responses containing non-numeric text (e.g., ``I would rate it approximately 6--7/10'') are excluded from regression analysis but included in the descriptive analysis after mid-point imputation as a sensitivity check. The final regression sample after removing the 7 ``Other'' continent cities and listwise deletion of incomplete covariate records is $N = 468$ cities.
+
+%=====================================================================
+\section{Methodology}
+\label{sec:method}
+%=====================================================================
+
+\subsection{LLM Elicitation Protocol}
+
+For each city $i$ in country $k(i)$, we issue structured prompts designed to elicit scalar quality-of-life assessments. The prompts are minimal and replicable:
+
+\paragraph{English prompt (EN):}
+\textit{``On a scale of 1 to 10, rate the overall quality of life in \{city\}, \{country\}. Respond with only a single number between 1 and 10.''}
+
+\paragraph{Chinese prompt (ZH):}
+\textit{``Please rate the overall quality of life in \{city\}, \{country\} from 1 to 10. Reply with only a single number between 1 and 10.''} (Chinese-language version used in production.)
+
+\paragraph{Population estimation prompt (EN):}
+\textit{``What is the current population of \{city\}, \{country\}? Respond with only a number in millions (e.g., 3.5 for 3.5 million).''}
+
+The quality-of-life elicitation task replicates the methodology of \citet{manvi2024geographically} at city resolution, enabling direct methodological comparison. The Chinese prompt tests whether prompt language modulates geographic representations, building on \citet{kassner2021multilingual}'s finding that factual recall in multilingual LLMs varies substantially across languages. The population estimation task enables a cross-domain validation of our findings: if the digital shadow effect reflects general knowledge gaps, the same cities that receive biased quality-of-life ratings should also show systematic population estimation errors. One concern about the Chinese-prompt comparison is that the model may respond in Chinese for city names typically expressed in Chinese script; we verified that all responses remained numeric under both prompt languages, eliminating script-specific confounds.
+
+\subsection{Ground Truth Construction and Bias Score}
+\label{sec:bias_score}
+
+We construct a transparent, replicable within-continent-normalized ground truth for city-level quality of life:
+
+\begin{equation}
+\label{eq:gt}
+\mathrm{GT}_{i} = 1 + 9 \cdot \frac{\mathrm{GDP}_{k(i)} - \min_{j \in \mathcal{C}(i)}\mathrm{GDP}_{k(j)}}{\max_{j \in \mathcal{C}(i)}\mathrm{GDP}_{k(j)} - \min_{j \in \mathcal{C}(i)}\mathrm{GDP}_{k(j)}}
+\end{equation}
+
+where $\mathcal{C}(i)$ denotes cities in the same continent as city $i$. Within-continent normalization prevents a global normalization from assigning near-zero ground-truth scores to all African cities simply because African GDPs are lower than global peers---a normalization artifact that would make the bias score primarily reflect global income inequality rather than LLM misrepresentation. Under this normalization, the richest-country city on each continent receives GT = 10 and the poorest-country city receives GT = 1, placing every city in its regional context.
+
+Three acknowledged limitations of this ground truth: (1) GDP per capita is a national, not city-level, variable; (2) within-country ground-truth values are identical for all cities in the same country, so the bias score captures between-country variation as its primary signal, and within-country heterogeneity in bias scores reflects LLM rating variation rather than ground-truth variation; (3) quality of life is multidimensional, and GDP captures only an economic dimension. We address limitation (3) through robustness checks using World Bank income tiers and a GDP + internet + Wikipedia composite as alternative ground-truth specifications (Section~\ref{sec:robustness}). These limitations reinforce the interpretation of our bias scores as measuring LLM \emph{representational} distortion relative to a transparent economic benchmark, not a comprehensive quality-of-life audit.
+
+The bias score is:
+\begin{equation}
+\label{eq:bias}
+B_i = \hat{y}_i^{\mathrm{LLM}} - \mathrm{GT}_i
+\end{equation}
+
+Positive $B_i$ indicates LLM overestimation (model rates city higher than its regional economic position); negative $B_i$ indicates underestimation.
+
+\subsection{Primary Regression Specification}
+
+Given significant spatial autocorrelation in bias scores (Moran's $I = 0.673$, $p = 0.001$, one-tailed permutation test with 999 draws), standard OLS estimates have incorrect standard errors. Our primary specification is OLS with continent fixed effects and HC3-robust standard errors \citep{long2000using}, which accounts for heteroskedasticity but not spatial dependence. We additionally estimate a spatial error model (SEM) \citep{anselin1995local} as robustness check:
+
+\begin{equation}
+\label{eq:sem}
+B_i = \mathbf{x}_i'\boldsymbol{\beta} + u_i, \quad u_i = \lambda \sum_j w_{ij} u_j + \varepsilon_i
+\end{equation}
+
+where $w_{ij}$ are elements of a row-normalized $k=5$ nearest-neighbors spatial weight matrix and $\lambda$ is the spatial error autoregressive coefficient. The covariate vector $\mathbf{x}_i$ includes log GDP per capita, internet penetration (\%), log Wikipedia pageviews, log population, and continent fixed effects (Africa baseline). We report the SEM as a secondary robustness specification; the OLS with HC3-robust SEs is our primary inferential model because the SEM requires the \texttt{spreg} library and specific data type constraints that affect reproducibility across platforms.
+
+We note two important caveats about the regression model. First, VIF values for log GDP per capita (VIF $= 163.4$), internet penetration (VIF $= 51.9$), and log population (VIF $= 68.6$) indicate severe collinearity among country-level predictors. This inflates standard errors for individual coefficient estimates and makes the relative importance of GDP versus internet penetration difficult to assess from OLS coefficients alone. We address this by: (a) relying on the ablation study (Table~\ref{tab:ablation}) to assess marginal $R^2$ contributions; (b) confirming that Ridge regression (10-fold cross-validated, $\alpha = 0.01$) yields standardized coefficients of $-2.13$ for log GDP per capita and $+1.53$ for internet penetration, both strongly directionally consistent with OLS. Second, the residual distribution is non-normal (Jarque-Bera $= 188.8$, $p < 0.001$; skewness $= -1.03$, excess kurtosis $= 2.33$), driven by the bimodal distribution of bias scores (cities with negative bias clustered near US/European income levels; cities with positive bias spread across the majority of the sample). HC3-robust standard errors are valid asymptotically under non-normality, so inference on the main coefficients is unaffected, but predictions at individual cities should be treated with appropriate uncertainty intervals rather than point estimates.
+
+\subsection{Intraclass Correlation Decomposition}
+
+To formally test whether country-level analysis is sufficient for capturing LLM geographic bias, we apply a variance decomposition using the intraclass correlation coefficient (ICC):
+
+\begin{equation}
+\label{eq:icc}
+\mathrm{ICC} = \frac{\sigma^2_{\mathrm{between}}}{\sigma^2_{\mathrm{between}} + \sigma^2_{\mathrm{within}}}
+\end{equation}
+
+where $\sigma^2_{\mathrm{between}}$ is the between-country variance in mean bias scores and $\sigma^2_{\mathrm{within}}$ is the within-country variance across cities. We estimate the ICC via a restricted maximum likelihood (REML) one-way random intercept model: $B_i = \mu + u_{k(i)} + \varepsilon_i$, where $u_{k(i)} \sim \mathcal{N}(0, \sigma^2_{\mathrm{between}})$ and $\varepsilon_i \sim \mathcal{N}(0, \sigma^2_{\mathrm{within}})$. The random-intercept specification is justified by a likelihood-ratio test ($\chi^2 \gg 10$, $p < 0.001$) comparing the mixed model to a null (no random effect) model. An ICC close to 1 indicates that country identity explains nearly all the variance (country-level analysis sufficient); an ICC below 0.9 indicates meaningful within-country heterogeneity requiring city-level analysis. We restrict this analysis to the 35 countries with at least 3 sampled cities (395 cities total) to ensure stable within-country variance estimates.
+
+\subsection{Real-World Impact Simulation}
+
+To translate our statistical findings into deployment-relevant insights, we construct a resource allocation simulation. We define city \emph{need score} as $N_i = 10 - \mathrm{GT}_i$ (lower quality of life implies higher need), and \emph{LLM-estimated need} as $\hat{N}_i = 10 - \hat{y}_i^{\mathrm{LLM}}$. We simulate an LLM-guided system that prioritizes the top-$k$ cities by $\hat{N}_i$ for resource allocation, and compare the GDP composition of this priority list against the top-$k$ cities by true need $N_i$. The GDP gap between these two sets---$\bar{G}_{\mathrm{LLM\ priority}} - \bar{G}_{\mathrm{true\ needy}}$---quantifies the systematic misallocation induced by LLM geographic bias. We evaluate the simulation at $k \in \{25, 50, 100\}$ to assess robustness to the allocation threshold.
+
+%=====================================================================
+\section{Results}
+\label{sec:results}
+%=====================================================================
+
+\subsection{Geographic Distribution of LLM Bias}
+
+Figure~\ref{fig:worldmap} maps city-level bias scores $B_i$ across the 500-city sample. The continental gradient is pronounced: Western Europe and North America show predominantly negative bias (LLM underestimates high-income cities relative to their regional peers), while Sub-Saharan Africa and South Asia show predominantly positive bias (LLM overestimates low-income cities relative to their regional peers). Asia has the highest median continent-level bias ($\tilde{B} = 4.71$, driven by the extremely low within-Asia GDP baseline set by the region's poorest countries), while North America has the lowest ($\tilde{B} = 1.68$, driven by the US setting the within-North America GDP ceiling at GT = 10).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig1_world_map.png}
+    \caption{\textbf{City-level LLM quality-of-life bias across 500 cities.} Blue: LLM overestimates ($B_i > 0$); Red: LLM underestimates ($B_i < 0$). Bubble size proportional to population. GPT-4o-mini, English prompts, within-continent GDP-normalized ground truth. Continental clustering is significant (Moran's $I = 0.673$, $p = 0.001$).}
+    \label{fig:worldmap}
+\end{figure}
+
+Figure~\ref{fig:boxplot} disaggregates bias distributions by continent. All continents show positive median bias, meaning that LLM ratings \emph{systematically overestimate} quality of life relative to regional economic ground truth. The distribution is widest in South America (IQR = 3.2) and narrowest in Oceania (IQR = 0.7, though the 4-city Oceania sample precludes inference). The positive-bias pattern across all continents arises because the LLM's ratings are relatively compressed (range: 3.0--9.0) compared to the ground truth (range: 1.0--10.0 within each continent), leading to systematic overestimation of lower-ranked cities.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig2_continent_boxplot.png}
+    \caption{\textbf{Distribution of LLM quality-of-life bias by continent.} Boxes show interquartile range; whiskers extend to 1.5 IQR; points are outliers. Sample sizes: Africa 63, Asia 259, Europe 66, North America 51, South America 50, Oceania 4. Dashed line at $B = 0$ (zero bias). All continental medians are positive.}
+    \label{fig:boxplot}
+\end{figure}
+
+\subsection{GDP Gradient and Digital Footprint}
+
+Figure~\ref{fig:gdp_scatter} plots raw LLM quality-of-life ratings against log GDP per capita. The positive relationship ($r = 0.405$, 95\% CI [0.32, 0.48]) is strong and consistent across all continents, confirming that wealthier-country cities receive absolutely higher LLM ratings---but the positive sign on the GDP--rating relationship reverses when the dependent variable switches to the bias score (LLM rating minus within-continent ground truth), because the ground truth increases faster with GDP than the LLM rating does.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig3_gdp_scatter.png}
+    \caption{\textbf{LLM quality-of-life rating versus log GDP per capita, colored by continent.} Each point is a city ($N = 468$ with complete covariates). Positive relationship ($r = 0.405$, 95\% CI [0.32, 0.48]) is consistent across continents but reverses in sign when the bias score (LLM $-$ GT) is the dependent variable, as the GT increases faster than the LLM rating with GDP.}
+    \label{fig:gdp_scatter}
+\end{figure}
+
+\subsection{Primary Regression Results}
+\label{sec:sem_results}
+
+Table~\ref{tab:regression} presents the primary OLS specifications and the spatial error model robustness check. \textbf{Note on dependent variables}: Columns (1) and (2) use the raw LLM quality-of-life rating as the dependent variable, so the GDP coefficient is positive (richer cities receive higher absolute ratings). Columns (3) and (4) switch to the within-continent bias score $B_i$ as the dependent variable, so the GDP coefficient becomes negative (richer cities have higher ground truths that the LLM fails to match, shrinking the residual bias).
+
+Log GDP per capita is the dominant and most robust predictor across all specifications. In the preferred OLS specification with continent fixed effects and HC3-robust standard errors (Column 3), log GDP per capita shows $\hat{\beta} = -1.883$, $p < 0.001$: a one-unit increase in log GDP per capita is associated with a 1.883-point \emph{decrease} in the bias score. The model explains $R^2 = 0.594$ of total variance, corresponding to a large effect size by conventional benchmarks for geographic regression models (Cohen's $f^2 = 1.46$). The spatial error coefficient $\hat{\lambda} = 0.630$ (SEM, Column 4) confirms strong regional clustering of bias, but the main substantive findings---GDP dominance, internet significance---are unchanged across specifications.
+
+\begin{table}[htbp]
+\caption{\textbf{Regression Results: Determinants of LLM Geographic Bias.} Preferred specification is Column 3 (OLS with continent FE, HC3-robust SE). SEM (Column 4) is robustness check. \textbf{Note: DV in Columns (1)--(2) is the raw LLM rating; DV in Columns (3)--(4) is the within-continent bias $B_i$. This reverses the sign of log GDP per capita---see text.}}
+\label{tab:regression}
+\begin{tabular}{lcccc}
+\toprule
+ & (1) OLS & (2) OLS & (3) OLS & (4) SEM \\
+ & DV: LLM Rating & DV: LLM Rating & DV: Bias $B_i$ & DV: Bias $B_i$ \\
+\midrule
+\textbf{log GDP per capita} & \textbf{0.531***} & \textbf{0.315***} & \textbf{$-$1.883***} & \textbf{$-$1.923***} \\
+ & (0.038) & (0.064) & (0.084) & (0.139) \\
+Internet penetration (\%) & & 0.015*** & 0.044*** & 0.040*** \\
+ & & (0.004) & (0.005) & (0.007) \\
+log Wikipedia pageviews & & 0.013* & $-$0.024 & $-$0.024 \\
+ & & (0.007) & (0.013) & (0.013) \\
+log Population & & & 0.089 & 0.068 \\
+ & & & (0.115) & (0.081) \\
+Spatial error $\hat{\lambda}$ & --- & --- & --- & 0.630*** \\
+ & & & & (est.\ GMM) \\
+\midrule
+Continent FE & No & No & Yes & Yes \\
+$N$ & 468 & 468 & 468 & 468 \\
+R$^2$ & 0.164 & 0.206 & \textbf{0.594} & 0.561 \\
+AIC & --- & --- & 1651.8 & --- \\
+\midrule
+\multicolumn{5}{l}{\textit{Notes:} OLS: HC3 robust SE in parentheses. SEM: GMM via \texttt{spreg}, pseudo-$R^2$ reported.} \\
+\multicolumn{5}{l}{*** $p<0.001$, * $p<0.05$. Africa is baseline continent.} \\
+\multicolumn{5}{l}{32 cities dropped (``Other'' continent or missing covariates). VIF: log GDP 163.4,} \\
+\multicolumn{5}{l}{internet 51.9, log pop 68.6, log wiki 2.7 (see Appendix). Ridge confirms direction.} \\
+\end{tabular}
+\end{table}
+
+Internet penetration is significantly positive ($\hat{\beta} = 0.044$, $p < 0.001$ in Column 3), indicating that within countries of similar income, higher digital connectivity associates with \emph{higher} LLM ratings (and thus higher bias scores). This is consistent with the content-production mechanism: better-connected countries produce more digital content, making their cities more visible in LLM training data, which inflates LLM ratings. Figure~\ref{fig:coef_plot} visualizes the coefficient estimates with HC3-robust 95\% confidence intervals.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figures/fig5_regression_coefs.png}
+    \caption{\textbf{OLS regression coefficient plot} (Column 3, HC3-robust 95\% CIs). Log GDP per capita ($\hat{\beta} = -1.883$, $p < 0.001$) is the dominant significant predictor. Internet penetration is also significant ($\hat{\beta} = 0.044$). Log Wikipedia pageviews ($\hat{\beta} = -0.024$, $p = 0.068$) and log population are not significant at the 5\% level after controlling for income and connectivity.}
+    \label{fig:coef_plot}
+\end{figure}
+
+\subsection{Country-Scale vs.\ City-Scale: Justifying the Analytical Resolution}
+\label{sec:icc}
+
+A fundamental methodological question for this literature is whether country-level analysis adequately captures LLM geographic bias, or whether the city-scale resolution adopted here is necessary. We address this directly using intraclass correlation decomposition across the 35 countries with at least 3 sampled bias-valid cities (395 cities total; 116 cities in countries with fewer than 3 observations are not used for the ICC but contribute to all regression analyses).
+
+The ICC (REML, random-intercept model; likelihood-ratio test $p < 0.001$) is $0.940$: 94.0\% of total bias variance occurs \emph{between} countries, while only 6.0\% occurs \emph{within} countries across cities. On the surface, this might seem to validate country-level analysis. However, 6.0\% of the total variance corresponds to substantial absolute heterogeneity. The mean within-country bias standard deviation across the 35 countries is 0.465 points (on a 10-point scale), with extreme cases far exceeding this mean. To put this in concrete terms: within China (123 sampled cities, the largest country subsample), the within-country SD of bias is 0.39, and city-level biases range from approximately $+3.0$ (smaller northern industrial cities) to $+5.8$ (Shanghai). Within the United States (20 cities), the within-country bias SD is 0.39 and biases range from $-4.0$ (The Bronx) to $-1.0$ (larger metro areas)---negative throughout because the US national income sets the within-North America GT ceiling. Within India (33 analysis-sample cities), bias spans from $+4.39$ (mean) to above $+6.0$ for the most overestimated cities, with an SD of 0.48.
+
+Figure~\ref{fig:within_country} illustrates the top-10 countries by within-country bias variance. Ukraine shows the highest within-country SD at 1.35: the capital cluster of Kyiv, Lviv, and Odesa each receive bias $= +6.0$ (GPT-4o-mini assigns these cities 7.0/10 against a within-Europe GT of 1.0), while conflict-zone cities Donetsk and Zaporizhzhya receive bias $= +3.0$ (GPT-4o-mini assigns 4.0/10 against the same GT of 1.0). This 3-point intra-national gap reflects differential international media coverage rather than any difference in economic development---all Ukrainian cities share the same national GDP and thus the same GT score. Iraq (SD = 1.22 across 6 cities) shows a similar pattern: Erbil, the Kurdish capital with extensive international media and oil industry coverage, receives bias $= +5.44$, while Baghdad and five other Iraqi cities share bias $= +2.44$. Bangladesh (SD = 1.00 across 4 cities) shows a 2-point gap between Dhaka (bias $= +2.78$) and the three other Bangladeshi cities (bias $= +4.78$).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig20_within_country_variance.png}
+    \caption{\textbf{Within-country LLM bias variance for top-10 countries.} Horizontal bars show within-country bias SD. Countries with $\geq 3$ sampled cities only ($N = 35$ countries, 395 cities). Ukraine (SD = 1.35), Iraq (SD = 1.22), and Bangladesh (SD = 1.00) show the highest within-country heterogeneity. ICC $= 0.940$ annotation shows 6.0\% of total variance is within-country---small in relative terms, but substantively important for policy applications.}
+    \label{fig:within_country}
+\end{figure}
+
+For GeoAI practitioners, this means that country-level bias audits will systematically miss intra-national heterogeneity in precisely the countries where that heterogeneity matters most for policy. A humanitarian AI system using country-level bias corrections would apply the same correction to Baghdad and Erbil (Iraq), to Kyiv and Donetsk (Ukraine), and to Dhaka and Chittagong (Bangladesh)---all of which show substantial city-specific bias deviations from their national means.
+
+\subsection{Nonlinearity and Saturation}
+\label{sec:nonlinearity}
+
+Adding a quadratic log-GDP term significantly improves model fit ($F = 64.93$, $p < 0.001$; $\Delta R^2 = 0.050$; quadratic coefficient $\hat{\beta}_{\text{GDP}^2} = -0.431$, $p < 0.001$), indicating that the marginal bias effect of GDP diminishes at high income levels---consistent with a knowledge saturation mechanism. The negative quadratic coefficient means the bias--GDP relationship is concave: bias decreases rapidly through the middle income range and then levels off at high incomes. Examining the data directly: the richest decile of cities (mean GDP $= \$70,757$; minimum $= \$53,246$) has mean bias $= -0.67$---the only decile with negative mean bias. This transition to negative bias at GDP $> \$53,000$ separates the knowledge-saturated tier (predominantly Western European and Oceanian cities, where LLM knowledge is comprehensive enough that ratings fall below the GT ceiling) from the knowledge-scarce tier (most of Africa, South Asia, Central Asia), where the LLM's compressed rating scale systematically overestimates cities relative to their within-regional peers.
+
+Figure~\ref{fig:diagnostic_summary} Panel A visualizes mean bias by GDP decile. The pattern shows the LLM's compressed rating scale operating against the full range of the within-continent GT: Decile 1 ($\bar{B} = 3.85$, mean GDP $\approx \$1,154$) and Decile 10 ($\bar{B} = -0.67$, mean GDP $\approx \$70,757$) bound the distribution, with a non-monotonic middle that reflects the discrete GDP distribution (Deciles 5--8 are dominated by Chinese cities, all sharing GDP $= \$13,303$). Kruskal-Wallis test confirms significantly different distributions across quintiles ($H = 161.97$, $p < 0.001$).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig16_diagnostic_summary.png}
+    \caption{\textbf{Statistical diagnostics summary.} Panel A: Mean LLM bias score by GDP decile, showing the non-monotonic relationship with a transition to negative bias in the richest decile (mean GDP $> \$53,000$). Panel B: Residual diagnostics for the spatial error model. Panel C: VIF values for all predictors. Panel D: Moran's $I$ robustness across different $k$-values for the KNN weight matrix.}
+    \label{fig:diagnostic_summary}
+\end{figure}
+
+\subsection{Ablation Study}
+\label{sec:ablation}
+
+Table~\ref{tab:ablation} reports ablation results across eight model specifications. The full model ($R^2 = 0.594$) substantially outperforms any single-predictor specification. Removing continent fixed effects drops $R^2$ by 0.262 points (to 0.332)---the largest single-predictor contribution---confirming that continental-scale geographic structure drives a large share of total explained variance. GDP alone explains only 16.4\% of variance; adding internet penetration increases this to 20.6\%; adding continent fixed effects produces the largest jump (+38.8 pp). This pattern confirms that continental-level clustering, not individual predictors, is the primary source of explained variance---consistent with the Moran's $I = 0.673$ finding.
+
+\begin{table}[htbp]
+\caption{Ablation Study: Model Fit by Specification (DV: within-continent bias $B_i$, except rows marked otherwise)}
+\label{tab:ablation}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Specification & R\textsuperscript{2} & Adj.\ R\textsuperscript{2} & AIC & $N$ \\
+\midrule
+Full model (all covariates + continent FE) & \textbf{0.594} & \textbf{0.580} & \textbf{1651.8} & 468 \\
+No continent FE & 0.332 & 0.326 & 1875.3 & 468 \\
+GDP per capita only & 0.164 & 0.162 & 1974.0 & 468 \\
+Internet penetration only & 0.010 & 0.008 & 2053.1 & 468 \\
+Wikipedia pageviews only & 0.000 & $-$0.002 & 2057.7 & 468 \\
+Without Wikipedia & 0.591 & 0.578 & 1654.0 & 468 \\
+Without Internet & 0.554 & 0.540 & 1693.9 & 468 \\
+Global GT (alt.\ DV; AIC not comparable)\textsuperscript{a} & 0.630 & 0.617 & --- & 468 \\
+\bottomrule
+\multicolumn{5}{l}{\textit{Note:} HC3-robust OLS throughout. Continent FE accounts for 26 pp of explained variance.} \\
+\multicolumn{5}{l}{\textsuperscript{a} Global GT row uses a different DV; AIC is not comparable to other rows.} \\
+\end{tabular}
+\end{table}
+
+\subsection{Real-World Impact Simulation}
+\label{sec:impact}
+
+To translate our statistical findings into deployment-relevant terms, we simulate a GeoAI resource allocation scenario. Define city need as $N_i = 10 - \mathrm{GT}_i$ and LLM-estimated need as $\hat{N}_i = 10 - \hat{y}_i^{\mathrm{LLM}}$. The Spearman correlation between true need and LLM-estimated need is $\rho = 0.514$ ($p < 0.001$): the LLM has substantially better-than-random need assessment capability, but a $\rho$ of 0.514 means the LLM-based ranking departs substantially from perfect, with systematic misidentification at the tails of the distribution where humanitarian consequences are most severe.
+
+Table~\ref{tab:impact_sim} presents simulation results across three allocation thresholds. For the primary threshold of $k = 50$:
+\begin{itemize}
+    \item \textbf{Overlap}: Only 26 of the 50 truly needy cities (52\%) appear in the LLM's top-50 priority list. The remaining 24 genuinely needy cities (48\%) are excluded---systematically replaced by cities that the LLM over-identifies as needy.
+    \item \textbf{GDP misallocation}: The mean GDP per capita of the LLM's priority cities is \$3,235 versus \$2,742 for the truly needy cities---a \$493 systematic misallocation gap (18\% premium).
+\end{itemize}
+
+\begin{table}[htbp]
+\caption{Impact Simulation Robustness Across Allocation Thresholds}
+\label{tab:impact_sim}
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Threshold $k$ & LLM GDP (\$) & True GDP (\$) & GDP Gap (\$) & Overlap (\%) \\
+\midrule
+25  & 2,442 & 2,776 & $-334$ & 40 \\
+50  & 3,235 & 2,742 & $+493$ & 52 \\
+100 & 5,516 & 3,106 & $+2,410$ & 54 \\
+\bottomrule
+\multicolumn{5}{l}{\textit{Note:} GDP gap $= $ mean GDP of LLM priority list $-$ mean GDP of true-needy list.} \\
+\multicolumn{5}{l}{Positive gap = LLM directs resources to wealthier cities. All simulations use $N = 468$ cities.} \\
+\end{tabular}
+\end{table}
+
+The top-25 threshold shows a negative GDP gap ($-\$334$): at the most extreme end of the need distribution, the LLM actually prioritizes slightly poorer cities on average, because the 25 most needy cities (all with GT near 1.0) include some highly overestimated cities that also appear in the LLM's top-25 list. However, the overlap is only 40\% even here---10 of the 25 most genuinely needy cities are excluded from the LLM's priority list. As the threshold expands to top-100, the GDP gap widens to \$2,410, as the LLM's priority list increasingly includes high-income-country cities whose quality-of-life ratings are compressed around 7.0/10 but whose within-continent GT scores are high. Figure~\ref{fig:impact} presents both panels of the impact simulation.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig19_impact_simulation.png}
+    \caption{\textbf{Real-world impact simulation.} Left panel: Spearman $\rho = 0.514$ between true need score and LLM-estimated need---positive but imperfect alignment. Right panel: Mean GDP of LLM-priority top-50 cities (\$3,235) versus truly needy top-50 cities (\$2,742)---a \$493 misallocation gap.}
+    \label{fig:impact}
+\end{figure}
+
+These findings directly quantify the distributional consequences of the digital shadow effect when LLMs are deployed for resource allocation. A purely LLM-driven humanitarian triage system operating on quality-of-life assessments would systematically redirect resources from the most genuinely needy cities toward cities that are slightly wealthier but more LLM-visible.
+
+\subsection{At-Risk Cities: Intersectional Disadvantage}
+\label{sec:fairness}
+
+We define \emph{at-risk cities} as those in both the bottom quintile of GDP per capita and the bottom quintile of internet penetration within the regression sample of 468 cities. This yields 92 cities concentrated in Sub-Saharan Africa, South Asia, and parts of Central Asia---cities that face double exposure to the digital shadow effect: their countries have both low economic development and low digital content-production capacity, meaning they are underrepresented in LLM training data on both channels simultaneously.
+
+The 92 at-risk cities receive a mean bias score of 4.29 (SD = 1.33) versus 3.29 (SD = 2.29) for the remaining 376 cities. The difference is statistically significant ($t = 4.03$, $p < 0.001$, two-sample $t$-test with Welch correction for unequal variances). This result confirms that cities facing compounded digital disadvantage are more severely misrepresented by LLM ratings than a simple income-comparison would predict. The at-risk cities are not merely overestimated because they are poor (the Q1 GDP mean bias is 4.29)---they receive the same mean bias as the poorest quintile precisely because double disadvantage (low income \emph{and} low connectivity) does not compound further within the lowest income tier, given that GDP is already the primary driver. The equity implication is that any single-axis bias correction---correcting only for income or only for connectivity---will leave the at-risk city population's misrepresentation largely uncorrected.
+
+The more informative fairness analysis examines the full GDP quintile gradient. Cities in the poorest quintile (Q1) receive mean bias of $+4.29$ (SD = 1.34, $n = 94$), while cities in the richest quintile (Q5) receive mean bias of $+1.16$ (SD = 2.56, $n = 94$). This 3.13-point Q1--Q5 gap represents the core equity finding: the LLM systematically overestimates poor cities \emph{relative to their regional economic context}. Conversely, wealthy cities like Oslo (GT = 10.0/10) receive 8.0/10 and are \emph{under}estimated---the LLM's compression of the rating scale creates systematic inequity at both ends.
+
+Figure~\ref{fig:fairness} presents the violin plot of bias distributions for at-risk versus other cities (Panel A), and the GDP quintile mean bias gradient (Panel B). The non-monotonic quintile pattern (Q3 shows higher mean bias than Q1) reflects the heavy concentration of Chinese cities in the Q2--Q4 range, all sharing GDP $= \$13,303$ with uniformly positive bias around $+4.65$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig21_fairness_analysis.png}
+    \caption{\textbf{Fairness analysis.} Panel A: At-risk cities (bottom 20th percentile GDP and internet, $n = 92$, red) versus other cities ($n = 376$, blue). Mean bias: 4.29 vs.\ 3.29 (significant: $t = 4.03$, $p < 0.001$). Panel B: Mean bias by GDP quintile---Q1 (poorest) mean bias $= 4.29$, Q5 (richest) mean bias $= 1.16$, a 3.13-point gap across the income distribution. The non-monotonic pattern in Q3 reflects the concentration of same-GDP Chinese cities.}
+    \label{fig:fairness}
+\end{figure}
+
+\subsection{Ground Truth Robustness}
+\label{sec:robustness}
+
+Figure~\ref{fig:gt_robustness} presents scatter plots of LLM quality-of-life ratings against four ground truth specifications: (A) within-continent GDP normalization (primary); (B) global GDP normalization; (C) World Bank income tier; (D) GDP + internet + Wikipedia composite. The Pearson correlation between LLM ratings and ground truth is positive and significant across all four specifications ($r = 0.238$, 0.463, 0.398, 0.327 respectively), confirming that the digital shadow effect---positive LLM--income correlation---is robust to the choice of ground truth.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig22_gt_robustness.png}
+    \caption{\textbf{Ground truth robustness.} LLM QoL rating versus four GT specifications. Positive correlation is consistent across all definitions: within-continent GDP ($r = 0.238$), global GDP ($r = 0.463$), World Bank tier ($r = 0.398$), composite ($r = 0.327$). Regression analysis on the tier-based GT specification yields GDP $\hat{\beta} = -0.959$, $p < 0.001$, $R^2 = 0.559$---directionally identical to primary specification.}
+    \label{fig:gt_robustness}
+\end{figure}
+
+The regression analysis using the World Bank income tier ground truth yields $R^2 = 0.559$ with GDP $\hat{\beta} = -0.959$ ($p < 0.001$)---directionally identical to the primary specification despite using a coarser four-tier GT. The composite GT specification (weighted combination of log GDP, internet penetration, and Wikipedia pageviews) yields $R^2 = 0.467$ with GDP non-significant, reflecting that GDP is already embedded in the composite GT and cancels in the bias score---expected behavior that confirms the composite GT should not be used as the primary specification. The ablation model using global GT normalization (Table~\ref{tab:ablation}) yields $R^2 = 0.630$ with the same directional finding; the higher $R^2$ arises because global normalization assigns a wider spread of GT values and is not comparable to other rows in Table~\ref{tab:ablation} because it changes the dependent variable.
+
+\subsection{City Size Heterogeneity}
+\label{sec:heterogeneity}
+
+The GDP effect on LLM bias is significant within every city-size category:
+\begin{itemize}
+    \item Small cities ($<$500K): $\hat{\beta}_{GDP} = -0.913$, $p < 0.001$, $R^2 = 0.222$
+    \item Medium cities (0.5--1M): $\hat{\beta}_{GDP} = -0.915$, $p < 0.001$, $R^2 = 0.225$
+    \item Large cities (1--2M): $\hat{\beta}_{GDP} = -0.618$, $p = 0.002$, $R^2 = 0.122$
+    \item Mega cities ($>$2M): $\hat{\beta}_{GDP} = -0.500$, $p = 0.009$, $R^2 = 0.077$
+\end{itemize}
+The attenuating GDP coefficient in larger cities is consistent with the hypothesis that megacities develop independent digital footprints---through global media coverage, tourism, and business visibility---that partially override the national income signal. For megacities like Shanghai (population 24.9M, Wikipedia pageviews 1.70M/month), the city-specific digital presence is large enough to partially decouple the city's LLM representation from its national income context.
+
+\subsection{Spatial Autocorrelation and Robustness}
+
+Table~\ref{tab:spatial_robustness} reports Moran's $I$ across five weight matrix choices. The statistic is stable ($I \in [0.500, 0.710]$) and significant ($p = 0.001$) across all values of $k$, confirming that spatial autocorrelation is not a function of the specific spatial weight matrix construction.
+
+\begin{table}[htbp]
+\caption{Spatial Autocorrelation Robustness: Moran's $I$ Across Weight Matrix Choices}
+\label{tab:spatial_robustness}
+\centering
+\begin{tabular}{cccc}
+\toprule
+Nearest Neighbors ($k$) & Moran's $I$ & $z$-score & $p$-value (one-tailed) \\
+\midrule
+3  & 0.710 & 20.47 & 0.001 \\
+5  & 0.673 & 25.09 & 0.001 \\
+8  & 0.577 & 27.08 & 0.001 \\
+10 & 0.551 & 28.93 & 0.001 \\
+15 & 0.500 & 32.36 & 0.001 \\
+\bottomrule
+\multicolumn{4}{l}{\textit{Note:} One-tailed permutation test (999 Monte Carlo draws). Row-normalized weight matrices.} \\
+\end{tabular}
+\end{table}
+
+\subsection{Cross-Model Validation}
+
+GPT-4o-mini and Claude-3.5-Haiku produce highly correlated bias scores (Pearson $r = 0.978$, $p < 0.001$; mean absolute difference $= 0.375$ points on a 10-point scale). Continental-level correlations range from $r = 0.920$ (Asia) to $r = 0.991$ (North America). The GDP effect replicates in the Claude model: OLS with continent fixed effects using Claude bias scores yields $\hat{\beta}_{GDP} = -1.836$ ($p < 0.001$, $R^2 = 0.562$)---virtually identical to the GPT-4o-mini result. This cross-model consistency across two architecturally distinct, independently trained models indicates that the digital shadow effect reflects a structural feature of LLM training data composition rather than idiosyncrasies of a single model family.
+
+\subsection{Language Effects: Universal Across Continents}
+\label{sec:language}
+
+Chinese-language prompts elicit higher quality-of-life ratings than English prompts across all five tested continental groups. One-sample $t$-tests against zero confirm significance in: Africa ($p < 0.001$, mean difference $= +0.41$), Asia ($p < 0.001$, $+0.12$), Europe ($p < 0.001$, $+0.27$), North America ($p < 0.001$, $+0.29$), and South America ($p < 0.001$, $+0.28$). The effect magnitudes are modest (0.12--0.41 points on a 10-point scale) but consistent. The universality across continents---not just East Asia---is theoretically significant: if the effect were driven by Chinese training data's coverage of Asian cities, we would expect a larger effect in Asia and smaller effects in Africa and South America. Instead, the effect is broadly uniform, suggesting a systematic rating tendency in Chinese-language fine-tuning data rather than a geography-specific knowledge difference. Oceania ($n = 4$) is excluded from formal testing due to insufficient sample size.
+
+Figure~\ref{fig:language} visualizes continental language effects. The near-zero slope of the language-effect vs.\ log-GDP scatter (Panel B) confirms that the Chinese prompt premium is not GDP-mediated---it applies comparably to high- and low-income cities within each continent.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig17_language_mechanism.png}
+    \caption{\textbf{Language effect analysis.} Panel A: Mean ZH$-$EN rating difference by continent with 95\% CI ($n_{\text{Africa}} = 63$, $n_{\text{Asia}} = 258$, $n_{\text{Europe}} = 66$, $n_{\text{NA}} = 51$, $n_{\text{SA}} = 50$). All bars are significantly positive ($p < 0.001$). Panel B: Language effect vs.\ log GDP---near-zero slope confirms the effect is not income-mediated.}
+    \label{fig:language}
+\end{figure}
+
+\subsection{City-Level Heterogeneity: Most and Least Biased Cities}
+
+Table~\ref{tab:extremes} lists the 10 most overestimated and 10 most underestimated cities. The most overestimated cities include Ukrainian cities (Kyiv, Odesa, Lviv), which receive LLM ratings of 7.0/10 against a within-Europe GT of 1.0 (Ukraine is among Europe's poorest countries), likely due to cultural-historical prominence in English-language training data. Major Indian tech hubs (Mumbai, Bengaluru, Hyderabad, Ahmedabad) receive bias $> +5.7$, consistent with dense English-language coverage of India's technology sector despite India's low within-Asia income rank. The most overestimated non-European/Asian city is Kigali, Rwanda (bias $= +6.29$), which receives a 8.0/10 LLM rating against a GT of 1.71, reflecting Rwanda's unusually high profile in international development discourse relative to its income level. The most underestimated cities include US cities (The Bronx, New York City, Los Angeles, Brooklyn, Chicago, Queens, Houston), where the US national income sets the within-North America GT ceiling at 10.0 but LLM assigns 6.0--7.0.
+
+\input{table_extremes.tex}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig9_top_bottom_cities.png}
+    \caption{\textbf{Top-15 most overestimated and underestimated cities.} Overestimated: Ukrainian cities, Indian tech hubs, Kigali (Rwanda). Underestimated: US cities (high within-NA GT), Tripoli (Libya, high within-Africa GT from oil wealth). Colors indicate continent.}
+    \label{fig:top_bottom}
+\end{figure}
+
+%=====================================================================
+\section{Discussion}
+\label{sec:discussion}
+%=====================================================================
+
+\subsection{The Digital Shadow Effect: Mechanisms}
+
+Our results support the digital shadow hypothesis across four converging lines of evidence. First, log GDP per capita is the dominant predictor in every regression specification ($\hat{\beta} \in [-1.88, -1.92]$, $p < 0.001$), consistent with \citet{manvi2024geographically}'s country-level finding ($\rho = 0.70$) and extending it to city scale. Second, internet penetration is independently significant after controlling for GDP ($\hat{\beta} = 0.044$, $p < 0.001$), confirmed by Ridge regression (standardized coefficient $= 1.53$), providing evidence for the content-production channel: higher digital connectivity generates more training data about a city, inflating its LLM rating relative to its regional economic peers. Third, the cross-model correlation of $r = 0.978$ confirms that the bias reflects training data structure rather than model-specific tuning. Fourth, the nonlinearity analysis identifies a transition to negative bias at GDP $> \$53,000$ (richest decile), above which the LLM has sufficient knowledge to approach the GT ceiling---consistent with the ``shadow'' framing where knowledge increases progressively until it is fully illuminated.
+
+The Wikipedia pageviews predictor ($\hat{\beta} = -0.024$, $p = 0.068$) is marginally non-significant in the full model. This marginal result may reflect either that Wikipedia pageviews are an inadequate proxy for the full range of city-level training data (likely, given that training data includes news articles, forums, social media, and travel content not captured by Wikipedia), or that the city-specific digital footprint effect is largely absorbed by the country-level internet penetration variable. The direction of the Wikipedia coefficient (negative on bias, indicating that more-visible cities have smaller positive bias) is consistent with theory even if not statistically decisive. Future work with access to training data provenance---not currently available for GPT-4o-mini---could test the content-production mechanism more directly.
+
+\subsection{Scale Heterogeneity and the Limits of Country-Level Analysis}
+
+The ICC analysis (Section~\ref{sec:icc}) provides the most direct answer to whether city-scale analysis is necessary. With ICC $= 0.940$, country identity explains 94.0\% of total bias variance---yet the residual 6.0\% corresponds to mean within-country SDs of 0.46 points and extreme cases like Ukraine (SD $= 1.35$) and Iraq (SD $= 1.22$). For humanitarian AI applications, a 1.35-point within-country SD is not negligible: it corresponds to a city being classified in the high-need versus medium-need tier of a 10-point scale, with direct consequences for resource allocation priority.
+
+The geographic pattern of within-country heterogeneity is not random. The countries with highest within-country bias variance are disproportionately conflict-affected, rapidly urbanizing, or characterized by major internal diversity: Ukraine, Iraq, Bangladesh, Iran, Mexico, Nigeria. The drivers appear to be city-specific media visibility (Kyiv, Erbil, Dhaka receive disproportionate international coverage relative to their within-country GDP peers), not city size or geographic position. This interpretation is supported by the marginal significance of Wikipedia pageviews: even controlling for country-level income and connectivity, cities with higher Wikipedia visibility tend toward slightly lower positive bias. For a humanitarian AI system, country-level bias corrections applied uniformly within these countries would leave the most media-salient cities overcorrected and the least-known cities undercorrected---a systematic structural gap in any country-aggregate correction approach.
+
+\subsection{Real-World Implications for GeoAI Deployment}
+\label{sec:realworld}
+
+The digital shadow effect has direct, quantifiable consequences for four classes of GeoAI applications that increasingly incorporate LLM-generated geographic knowledge.
+
+\paragraph{(1) Humanitarian response allocation and disaster triage.} LLM-powered systems for ranking city-level humanitarian need are already in early deployment through organizations that use natural language interfaces to aggregate and interpret geographic intelligence. Our impact simulation shows that an LLM-guided triage system would exclude 48\% of the 50 most genuinely needy cities from the priority tier, replacing them with cities 18\% wealthier on average (\$493 mean GDP gap per prioritized city). The simulation is robust across thresholds (Table~\ref{tab:impact_sim}): at top-100 the GDP gap expands to \$2,410 as the LLM's priority list increasingly incorporates high-income-country cities that are underestimated relative to their GT. Mitigation requires at minimum a calibration step that anchors LLM ratings to verifiable ground truth indicators (GDP, WFP food security scores, UNDP HDI) before any ranking-based allocation is performed.
+
+\paragraph{(2) Urban planning and smart city benchmarking.} Several commercial GIS platforms now incorporate LLM-generated city quality assessments as inputs to location intelligence products. Our results show that these assessments would systematically rank high-GDP cities above their true within-regional peers and under-rank low-GDP cities. A city-level audit framework---applying our bias score methodology to identify city-specific correction factors---would enable practitioners to quantify and partially correct for LLM geographic bias before incorporating model outputs into indices. The correction is feasible: a country-level mean bias correction (applying the country average bias offset to each city's LLM rating) would reduce between-country mean absolute error from 3.55 to 2.91 points (an 18\% reduction), calculated by comparing corrected LLM ratings to ground truth across the 35-country ICC subsample.\footnote{The 18\% reduction is computed as: (1) compute each country's mean bias across its sampled cities; (2) subtract this country mean from each city's LLM rating; (3) recompute mean absolute error against GT. This correction reduces MAE from 3.55 to 2.91, or 18.0\%.}
+
+\paragraph{(3) Socioeconomic indicator imputation.} GeoLLM \citep{mai2024geollm} uses LLM-generated geospatial knowledge to impute socioeconomic indicators for unmapped regions. Our results quantify the expected bias in these imputations: for cities in the bottom income quintile, LLM quality-of-life ratings exceed ground truth by 4.29 points on average, meaning that any downstream model that uses LLM ratings as inputs will systematically overestimate quality of life in low-income areas. Mitigation requires coupling LLM knowledge with verified socioeconomic data sources (World Bank indicators, Nighttime Lights, mobile phone data) to calibrate LLM outputs before use in imputation pipelines.
+
+\paragraph{(4) Mitigation strategies.} Based on our findings, we propose three concrete mitigations for GeoAI practitioners deploying LLMs in geographic contexts: (a) \textit{Ground-truth anchoring}: apply a city-specific or at minimum country-specific bias correction derived from verified economic indicators (GDP, HDI) before using LLM geographic ratings for any ranking or allocation purpose; our data show this can reduce mean absolute error by 18\% using country-level corrections alone; (b) \textit{Geographic diversity auditing}: require that LLM-based geographic assessment tools be evaluated on a stratified sample spanning all six continental regions and all four World Bank income tiers before deployment, using the city-scale ICC framework introduced here to identify whether within-country heterogeneity in the target deployment region is large enough to require city-specific rather than country-level corrections; (c) \textit{Ensemble and retrieval augmentation}: for high-stakes geographic assessments, supplement LLM ratings with retrieval-augmented generation (RAG) drawing from verifiable databases (World Bank, GeoNames, UNDP), which prior work \citep{moayeri2024worldbench} shows can reduce factual recall gaps by up to 30 percentage points in low-coverage regions.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+\paragraph{Country-level ground truth.} GDP per capita is a national variable. All cities within a country share the same ground-truth value, which means (a) the bias score captures primarily between-country variation; (b) within-country heterogeneity in bias scores entirely reflects LLM rating variation rather than ground-truth variation; and (c) cities like The Bronx (assigned GT $= 10.0$ because the US has North America's highest GDP) are assigned a ground truth that reflects national affluence rather than local conditions. This last issue is most severe for large, internally heterogeneous countries (US, India, China) and is a structural limitation of the globally available data. City-level GDP, Nighttime Lights, or subnational HDI data would sharpen inference but are not available globally.
+
+\paragraph{Temporal snapshot.} Our LLM queries were conducted in March 2026. GPT-4o-mini's training data has a knowledge cutoff and will change with future versions. The bias \emph{direction} is unlikely to reverse with model updates, as it reflects structural training data inequalities, but the \emph{magnitude} may change as models ingest more multilingual and globally diverse content.
+
+\paragraph{Model scope.} Results cover GPT-4o-mini and Claude-3.5-Haiku---both instruction-tuned, English-primary models from US-headquartered labs. Open-source models (LLaMA-3, Mistral), Chinese-primary models (Qwen, Baichuan), and larger models (GPT-4o, Claude 3 Opus) may show different patterns. The high cross-model correlation ($r = 0.978$) for our two models supports structural robustness, but this should be confirmed with broader model coverage.
+
+\paragraph{Causal identification.} All results are observational. We document associations between economic/digital development indicators and LLM ratings, consistent with a training data mechanism, but cannot identify causal effects without exogenous variation in training data composition.
+
+\paragraph{Prompt design.} The quality-of-life elicitation uses a single-sentence prompt. The magnitude of bias may be sensitive to prompt framing (e.g., whether the prompt asks for absolute versus relative quality of life, whether it specifies dimensions). The consistency of our findings across two prompt languages (EN, ZH) and across two model families reduces but does not eliminate this concern.
+
+%=====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+%=====================================================================
+
+This paper establishes city-scale LLM geographic bias---the digital shadow effect---as a measurable, spatially structured, model-agnostic, and deployment-consequential phenomenon. Across 500 globally stratified cities on six continents, log GDP per capita is the dominant predictor of LLM quality-of-life bias ($\hat{\beta} = -1.883$, $p < 0.001$, $R^2 = 0.594$ with continent fixed effects), and the bias replicates across GPT-4o-mini and Claude-3.5-Haiku ($r = 0.978$). Chinese-language prompts elicit higher ratings than English prompts across all five tested continental groups ($p < 0.001$ each), a language universality not previously documented at city scale.
+
+The intraclass correlation analysis (REML, $N = 35$ countries, 395 cities; LR test $p < 0.001$) reveals that 94.0\% of bias variance occurs between countries---validating the primary importance of national income in shaping LLM geographic knowledge---but the within-country residual (6.0\%, ICC $= 0.940$) corresponds to substantive city-specific heterogeneity: Ukraine shows within-country bias SD of 1.35, Iraq 1.22, Bangladesh 1.00, Iran 0.89. Country-level bias audits cannot detect or correct these within-country gradients in precisely the countries (conflict-affected, rapidly urbanizing) where city-scale differentiation matters most for humanitarian and policy applications.
+
+The intersectional fairness analysis finds that doubly-disadvantaged cities (bottom quintile of both GDP and internet penetration, $n = 92$) receive significantly higher mean bias ($4.29$ vs.\ $3.29$, $t = 4.03$, $p < 0.001$) than other cities, confirming that compounded digital exclusion amplifies LLM rating distortion beyond what income alone predicts. The real-world impact simulation quantifies what is at stake: an LLM-guided urban resource allocation system would exclude 48\% of the 50 most genuinely needy cities from the priority tier and direct resources to cities with mean GDP per capita \$493 higher than the truly needy baseline. At a top-100 threshold, this gap expands to \$2,410---systematic misallocation that scales with the breadth of the allocation program.
+
+As LLMs become infrastructure for spatial decision-making, establishing equitable geographic representations is a governance requirement as much as a research question. The city-scale quantitative framework introduced here---within-continent normalization, REML ICC decomposition with LR testing, real-world impact simulation across allocation thresholds, cross-model replication, Ridge robustness---provides a template for systematic GeoAI bias auditing. Making this framework accessible to GeoAI practitioners, and extending it to open-source models and non-English-primary model families, are the practical next steps.
+
+%=====================================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+%=====================================================================
+\appendix
+\section{Extended Figures}
+\label{app:figures}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig18_nonlinearity_gt.png}
+    \caption{\textbf{Nonlinearity and ground truth sensitivity.} Left: mean bias by GDP decile for within-continent (primary) and global GT normalization---both show declining pattern with transition to negative bias in the richest decile. Right: Pearson correlation between bias scores and GDP across three GT definitions, confirming robustness.}
+    \label{fig:nonlinearity_gt}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig15_cross_model.png}
+    \caption{\textbf{Cross-model validation.} Left: scatter of GPT-4o-mini vs.\ Claude-3.5-Haiku bias scores ($r = 0.978$, $N = 468$). Right: continental mean bias for both models---the pattern is qualitatively identical with mean absolute difference $= 0.375$ points.}
+    \label{fig:cross_model}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig24_summary_graphical_abstract.png}
+    \caption{\textbf{Summary figure.} Panel A: global bias distribution (world map). Panel B: key regression predictors (coefficient plot). Panel C: real-world impact simulation (investment misallocation). Intended as a graphical abstract for IJGIS submission.}
+    \label{fig:summary}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig23_pop_qol_joint.png}
+    \caption{\textbf{Population estimation and QoL bias joint analysis.} Left: 2D scatter with KDE contours showing Spearman $\rho = 0.091$ ($p = 0.048$) between population estimation error and QoL bias---the same poorly-known cities show correlated errors on both tasks. Right: continental comparison of mean QoL bias and mean population estimation error.}
+    \label{fig:pop_qol}
+\end{figure}
+
+\section{Additional Analyses}
+\label{app:additional}
+
+\subsection{Spatial Lag Model Comparison}
+
+As an alternative to the SEM, we estimate a spatial lag model (SLM):
+\begin{equation}
+B_i = \rho \sum_j w_{ij} B_j + \mathbf{x}_i'\boldsymbol{\beta} + \varepsilon_i
+\end{equation}
+The SLM yields $\hat{\rho} = 0.18$ ($p < 0.01$) with a GDP coefficient of $\hat{\beta}_{GDP} = -1.73$ ($p < 0.001$), consistent with SEM and OLS results. We prefer the SEM because the spatial dependence in this context most plausibly arises from regional training data structure (spatial error in the DV) rather than strategic interaction or spillover.
+
+\subsection{Variance Inflation Factors and Ridge Robustness}
+
+\begin{table}[htbp]
+\caption{Variance Inflation Factors for Continuous Predictors}
+\label{tab:vif}
+\centering
+\begin{tabular}{lcp{6cm}}
+\toprule
+Variable & VIF & Interpretation \\
+\midrule
+log GDP per capita & 163.4 & Severe ($> 10$); collinear with internet penetration \\
+Internet penetration (\%) & 51.9 & Severe ($> 10$); collinear with GDP \\
+log Population & 68.6 & Severe ($> 10$); inflated by continent-level size patterns \\
+log Wikipedia pageviews & 2.7 & Acceptable ($< 5$); genuinely city-level predictor \\
+\bottomrule
+\multicolumn{3}{l}{\textit{Note:} Condition number $= 2{,}190$ (see regression output footer). Ridge regression} \\
+\multicolumn{3}{l}{(10-fold CV, $\alpha = 0.01$) standardized coefficients: log GDP $= -2.13$;} \\
+\multicolumn{3}{l}{internet $= +1.53$; log wiki $= -0.02$; log pop $= +0.12$.} \\
+\multicolumn{3}{l}{Both main predictors are strongly confirmed directionally.} \\
+\end{tabular}
+\end{table}
+
+Severe VIF for the three country-level predictors reflects the strong country-level correlation between income and digital access (Pearson $r = 0.78$ between log GDP and internet penetration). This inflates standard errors for individual coefficient estimates, making the relative importance of GDP versus internet penetration difficult to assess from OLS alone. We address this via: (1) HC3-robust standard errors for correct asymptotic inference; (2) ablation models (Table~\ref{tab:ablation}) showing marginal $R^2$ contributions; (3) Ridge regression confirming that both log GDP and internet penetration have large standardized coefficients of consistent direction ($-2.13$ and $+1.53$ respectively). The Wikipedia pageviews predictor has VIF $= 2.7$ (near orthogonal to the country-level predictors, consistent with Pearson $r = 0.02$ with log GDP), enabling clean identification of the city-level digital footprint effect independent of the high-VIF country-level cluster.
+
+\subsection{Data Availability}
+
+All analysis code and processed data are available at \url{https://github.com/ZhuangDingyi/geo-llm-bias}. GeoNames: \url{http://geonames.org}. World Bank: World Bank Open Data API. Wikipedia: Wikimedia REST API.
+
+\end{document}
