@@ -1,0 +1,136 @@
+{
+  "spatial_error": {
+    "lambda": null,
+    "pseudo_r2": 0.59421661549574,
+    "gdp_coef": -1.8830244674871628,
+    "internet_coef": 0.043623936410188954,
+    "n": 468
+  },
+  "fairness": {
+    "at_risk_n": 59,
+    "at_risk_mean_bias": 3.64404539537587,
+    "other_mean_bias": 3.459158993840632,
+    "t_stat": 0.61033275940875,
+    "p_val": 0.541938926748282,
+    "bias_gap": -0.18488640153523805,
+    "quint_stats": [
+      {
+        "gdp_quintile": "Q1\n(poorest)",
+        "mean": 4.2921962757788865,
+        "std": 1.34073080723711,
+        "count": 94
+      },
+      {
+        "gdp_quintile": "Q2",
+        "mean": 3.2281230770657277,
+        "std": 2.3539087366807,
+        "count": 112
+      },
+      {
+        "gdp_quintile": "Q3",
+        "mean": 4.649738580910811,
+        "std": 0.3868516618463796,
+        "count": 126
+      },
+      {
+        "gdp_quintile": "Q4",
+        "mean": 4.040552821572754,
+        "std": 0.9535701192294702,
+        "count": 42
+      },
+      {
+        "gdp_quintile": "Q5\n(richest)",
+        "mean": 1.1617892824744702,
+        "std": 2.558142827618198,
+        "count": 94
+      }
+    ]
+  },
+  "impact_simulation": {
+    "need_correlation_rho": 0.5138120121555328,
+    "need_correlation_p": 6.859746376663519e-33,
+    "top50_overlap_pct": 52.0,
+    "llm_priority_mean_gdp": 3235.4478074583067,
+    "true_priority_mean_gdp": 2741.853283492447,
+    "gdp_misallocation_gap": 493.5945239658595
+  },
+  "scale_comparison": {
+    "n_countries_3plus": 35,
+    "mean_within_country_sd": 0.4646139727913703,
+    "icc": 0.9431222567961935,
+    "pct_within_country_variance": 5.687774320380646,
+    "top_variance_countries": [
+      {
+        "country_code": "UA",
+        "mean": 4.857142857142857,
+        "std": 1.3451854182690985,
+        "count": 7
+      },
+      {
+        "country_code": "IQ",
+        "mean": 2.93564704607426,
+        "std": 1.224744871391589,
+        "count": 6
+      },
+      {
+        "country_code": "BD",
+        "mean": 4.28266278640946,
+        "std": 1.0,
+        "count": 4
+      },
+      {
+        "country_code": "IR",
+        "mean": 4.123736337034876,
+        "std": 0.8944271909999159,
+        "count": 5
+      },
+      {
+        "country_code": "MX",
+        "mean": 4.184469516451273,
+        "std": 0.8574929257125443,
+        "count": 18
+      },
+      {
+        "country_code": "NG",
+        "mean": 3.7794908086885806,
+        "std": 0.6504436355879908,
+        "count": 13
+      },
+      {
+        "country_code": "AE",
+        "mean": 1.695071292741592,
+        "std": 0.5773502691896258,
+        "count": 3
+      },
+      {
+        "country_code": "KE",
+        "mean": 3.270478352834081,
+        "std": 0.5773502691896258,
+        "count": 3
+      },
+      {
+        "country_code": "BO",
+        "mean": 5.573610499017465,
+        "std": 0.5773502691896257,
+        "count": 3
+      },
+      {
+        "country_code": "PL",
+        "mean": 4.486867669412692,
+        "std": 0.5773502691896257,
+        "count": 3
+      }
+    ]
+  },
+  "gt_robustness": {
+    "tier_model_r2": 0.5585350570307048,
+    "tier_gdp_beta": -0.9591842075600627,
+    "composite_model_r2": 0.46694099525896926,
+    "composite_gdp_beta": 0.07445920241761356
+  },
+  "pop_bias": {
+    "qol_pop_correlation": 0.09145348845069799,
+    "qol_pop_p": 0.0480081910276682,
+    "pop_model_r2": 0.0363482524763018
+  }
+}
